@@ -1,0 +1,603 @@
+/**********************购物车样式**********************/
+
+
+/****************购物车大盒子******************/
+
+.gcarbox {
+	width: 1280px;
+	height: 1400px;
+	margin: 0 auto;
+	position: relative;
+}
+
+
+/***************header头部*******************/
+
+.header_top {
+	width: 958px;
+	height: 29px;
+	padding: 0 160px;
+	border: 1px solid rgb(235, 231, 227);
+	background: rgb(236, 231, 227);
+	line-height: 29px;
+	margin: 0 auto;
+}
+
+.header .header_top span.header_span {
+	/*会员的*/
+	color: red;
+	margin-top: 10px;
+	font-weight: 600;
+	/*加粗字体*/
+}
+
+.header .header_top span.header_denglu a {
+	/*登录|注册*/
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.header .header_top span.header_denglu a:hover {
+	/*登录|注册*/
+	color: rgb(211, 22, 27);
+	/*鼠标滑过显示的颜色*/
+}
+
+.header .header_top ul.header_top_right {
+	/*右边列表*/
+	float: right;
+}
+
+.header .header_top ul.header_top_right li {
+	/*右边列表的Li*/
+	float: left;
+}
+
+.header .header_top ul.header_top_right li a {
+	/*右边列表的Li里面的a标签*/
+	border-right: 1px solid rgb(156, 140, 134);
+	padding: 0 7px;
+}
+
+.header .header_top ul.header_top_right li a:hover {
+	/*右边列表的Li里面的a标签*/
+	color: rgb(161, 16, 17);
+}
+
+.header .header_top ul.header_top_right li a.no_border {
+	/*右边列表的Li里面的a标签最后一个无边*/
+	border-right: none;
+}
+
+.header .header_top ul.header_top_right li a.phone img {
+	/*右边列表的Li里面的a标签里面的手机小图标*/
+	margin-right: 2px;
+	width: 20px;
+	height: 17px;
+	line-height: 30px;
+}
+
+.header p {
+	/*右边列表的我的账户的下拉框*/
+	position: absolute;
+	width: 75px;
+	height: 80px;
+	background: white;
+	border: 1px solid #FFFFFF;
+	box-shadow: 0 0 1px 1px;
+	top: 27px;
+	right: 430px;
+}
+
+.header p.myuser a {
+	width: 75px;
+	height: 26.7px;
+	display: block;
+	float: left;
+}
+
+.header p.myuser a:hover {
+	background: rgb(161, 16, 17);
+	text-decoration: none;
+	color: white;
+}
+
+
+/*********************logo*************************/
+
+.gcarbox .glogo {
+	/*第二块logo+状态条*/
+	width: 960px;
+	height: 100px;
+	padding: 0 160px;
+	border-bottom: 2px solid rgb(126, 0, 1);
+	background-color: #f1eeed;
+	position: relative;
+}
+
+.gcarbox .glogo img {
+	/*logo图片*/
+	position: absolute;
+	top: 25px;
+}
+
+.gcarbox .glogo li {
+	/*三个li*/
+	float: right;
+	width: 158px;
+	height: 100px;
+	color: #cccccc;
+	font-weight: bolder;
+	position: relative;
+}
+
+.gcarbox .glogo li.gheightlight {
+	/*第一个高亮的li*/
+	color: #ac0916;
+}
+
+.gcarbox .glogo li p.gh {
+	/*中间的横线*/
+	position: absolute;
+	top: 37px;
+	width: 158px;
+	height: 4px;
+	background: #CCCCCC;
+}
+
+.gcarbox .glogo li.gheightlight p.gh {
+	/*第一个高亮的li 下面的横条颜色*/
+	background: #ac0916;
+}
+
+.gcarbox .glogo li p.gfont {
+	/*横线下面的文字*/
+	position: absolute;
+	top: 55px;
+	width: 158px;
+	text-align: center;
+}
+
+.gcarbox .glogo li button {
+	/*横线上的小圆圈*/
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	border-radius: 50px;
+	background: #CCCCCC;
+	font-size: 20px;
+	color: white;
+	position: absolute;
+	top: 26px;
+	left: 63px;
+}
+
+.gcarbox .glogo li button.gbtn1 {
+	/*横线上的小圆圈高亮*/
+	background: #ac0916;
+}
+
+
+/********************中间的内容gcontent************************/
+
+.gcarbox .gcontent {
+	/*中间内容大盒子设定*/
+	width: 960px;
+	height: auto;
+	padding: 0 160px;
+	position: relative;
+}
+
+.gcarbox .gcontent div.gtip {
+	/*温馨提示*/
+	width: 711px;
+	height: 32px;
+	line-height: 32px;
+	border: 1px solid #CCCCCC;
+	margin-top: 20px;
+	position: relative;
+	box-shadow: 0 2px 1px 0;
+	/*垂直偏移 */
+}
+
+.gcarbox .gcontent div.gtip b {
+	/*温馨提示里面的关闭按钮*/
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	text-align: center;
+	float: right;
+	margin-right: 10px;
+	margin-top: 8px;
+	font-size: 16px;
+	cursor: pointer;
+	position: relative;
+	border: 1px solid #CCCCCC;
+}
+
+.gcarbox .gcontent div.gtip span {
+	/*温馨提示颜色字样*/
+	color: #ff6600;
+	margin-right: 4px;
+	margin-left: 6px;
+}
+
+.gcarbox .gcontent div.gcarcont {
+	/*购物车内容*/
+	width: 960px;
+	height: auto;
+	border: 6px solid rgb(231, 231, 231);
+	margin-top: 13px;
+}
+
+.gcarbox .gcontent div.gcarcont div.radio {
+	/*单选按钮,由也买酒配送*/
+	width: 960px;
+	height: 40px;
+	line-height: 40px;
+	background: #f1eeeb;
+	color: #333;
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom: 2px solid #e0dad8;
+}
+
+.gcarbox .gcontent div.gcarcont div.radio input {
+	/*单选按钮,由也买酒配送*/
+	margin-right: 4px;
+	margin-left: 4px;
+}
+
+.gcarbox .gcontent div.gcarcont div.chenkbox {
+	/*复选按钮，全选*/
+	width: 960px;
+	height: 33px;
+	line-height: 33px;
+	background: #f1eeeb;
+	color: #333;
+	border-top: 2px solid #85726c;
+}
+
+.gcarbox .gcontent div.gcarcont div.chenkbox input {
+	/*复选按钮，全选*/
+	margin-left: 18px;
+	margin-right: 5px;
+}
+
+.gcarbox .gcontent div.gcarcont div.chenkbox .gname {
+	/*名称*/
+	display: inline-block;
+	width: 415px;
+	text-align: center;
+}
+
+.gcarbox .gcontent div.gcarcont div.chenkbox .dj {
+	/*单价，数量，合计*/
+	display: inline-block;
+	width: 110px;
+	text-align: center;
+}
+
+.gcarbox .gcontent div.gcarcont div.goodslist {
+	/*商品列表上面横线的背景*/
+	width: 960px;
+	height: auto;
+	line-height: 100px;
+	background: url(img/gbg.jpg) repeat-x 0 0;
+	border-bottom: 1px solid #9e9694;
+}
+
+.gcarbox .gcontent div.gcarcont div.goodslist li {
+	/*商品列表里面的内容*/
+	float: left;
+}
+
+.gcarbox .gcontent div.gcarcont div.goodslist li.chenkb input {
+	/*复选框*/
+	margin-left: 31px;
+}
+
+div#goodslist {
+	/*装商品的盒子*/
+	display: block;
+	width: 960px;
+	height: auto;
+}
+
+div.list {
+	/*盒子里面的列表,装不同的商品*/
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	position: relative;
+	/*相对定位*/
+}
+
+div.goodslist li img {
+	/*商品列表里面的图片*/
+	width: 60px;
+	height: 110px;
+	margin-left: 41px;
+	margin-top: 5px;
+}
+
+li.glistname {
+	/*名称*/
+	display: inline-block;
+	width: 30%;
+	margin-left: 20px;
+}
+
+li.price1 {
+	/*价格*/
+	width: 13%;
+	text-align: center;
+}
+
+li.num1 {
+	/*数量*/
+	width: 13%;
+	height: 20px;
+	text-align: center;
+}
+
+a.del {
+	/*删除按钮*/
+	width: 13%;
+	margin-left: 30px;
+	text-align: center;
+}
+
+a.del:hover {
+	/*鼠标滑过变成绿色*/
+	color: blue;
+}
+
+li.allnum {
+	/*合计的样式*/
+	width: 13%;
+	color: red;
+	font-size: 16px;
+	text-align: center;
+}
+
+li.button1 {
+	/*减减减减*/
+	font-size: 16px;
+	background: gainsboro;
+	width: 1.1%;
+	height: 16px;
+	line-height: 12px;
+	text-align: center;
+	border: 1px solid #999999;
+	position: absolute;
+	/*绝对定位*/
+	top: 40px;
+	left: 570px;
+	cursor: pointer;
+}
+
+li.button2 {
+	/*加加加加*/
+	font-size: 16px;
+	background: gainsboro;
+	width: 1.1%;
+	height: 16px;
+	line-height: 12px;
+	text-align: center;
+	border: 1px solid #999999;
+	position: absolute;
+	top: 40px;
+	left: 610px;
+	cursor: pointer;
+}
+
+
+/******** 下面的合计********/
+
+.gcarbox .gcontent div.addall {
+	width: 960px;
+	height: 32px;
+	margin-top: 27px;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.gcarbox .gcontent div.addall ul {
+	float: right;
+}
+
+.gcarbox .gcontent div.addall ul li {
+	float: left;
+	margin-left: 30px;
+}
+
+.gcarbox .gcontent div.addall ul li b {
+	/*红色字体*/
+	color: #d63939;
+}
+
+.gcarbox .gcontent div.addall ul li span {
+	color: #3172b2;
+}
+
+
+/********本次换购活动********/
+
+.gcarbox .exchange {
+	width: 958px;
+	height: 570px;
+	margin-bottom: 30px;
+	border: 1px solid #dddddd;
+	margin: 0 auto;
+}
+
+.gcarbox .exchange h1 {
+	/*本次购买可享受换购*/
+	color: #666;
+	font-size: 14px;
+	height: 33px;
+	line-height: 30px;
+	background: #fafafa;
+	padding-left: 10px;
+	border-bottom: 1px solid #dddddd;
+}
+
+.gcarbox .exchange h1 ins {
+	/*小字*/
+	color: #999;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+
+/******换购商品，5个ul*******/
+
+.gcarbox .exchange ul {
+	/*一个ul*/
+	width: 300px;
+	height: 230px;
+	margin: 10px 0 10px 10px;
+	float: left;
+	border: 1px solid #cccccc;
+}
+
+.gcarbox .exchange ul h2 {
+	/*小标题*/
+	margin: 0;
+	font-size: 12px;
+	background: #999999;
+	padding-left: 10px;
+	color: white;
+	width: 290px;
+	height: 30px;
+	line-height: 30px;
+}
+
+.gcarbox .exchange ul h3 {
+	/*图片存放位置*/
+	width: 110px;
+	height: 180px;
+	margin: 0;
+	margin-left: 10px;
+	margin-top: 10px;
+	border: 1px solid #CCCCCC;
+	float: left;
+	/*浮动*/
+}
+
+.gcarbox .exchange ul dl {
+	/*右边的文字信息*/
+	width: 150px;
+	height: 180px;
+	margin-left: 20px;
+	float: left;
+	/*浮动*/
+}
+
+.gcarbox .exchange ul dl h4>a {
+	/*方格里面商品的标题*/
+	color: #333;
+}
+
+.gcarbox .exchange ul dl span,
+p {
+	/*方格里面商品的标题*/
+	color: #666;
+	height: 25px;
+	line-height: 25px;
+}
+
+.gcarbox .exchange ul dl p>big {
+	/*数量高亮红色*/
+	color: #b70513;
+	font-size: 16px;
+	font-weight: bolder;
+}
+
+.gcarbox .exchange ul dl input {
+	/*数量显示*/
+	width: 24px;
+	height: 16px;
+	text-align: center;
+	line-height: 16px;
+}
+
+.gcarbox .exchange ul dl #btncar1 {
+	/*加入购物车*/
+	background: #db4040;
+	color: white;
+	width: 80px;
+	height: 24px;
+	line-height: 24px;
+	margin-top: 10px;
+	text-align: center;
+	cursor: pointer;
+}
+
+
+/***********************底部bottom*****************************/
+
+.gcarbox .gcarBtm {
+	margin-top: 20px;
+	width: 1280px;
+	height: 180px;
+	position: relative;
+	border-top: 1px solid #CCCCCC;
+}
+
+.gcarbox .gcarBtm .glist1 {
+	width: 1280px;
+	height: 55px;
+}
+
+.gcarbox .gcarBtm ul.glist1 {
+	/***上***/
+	width: 1280px;
+	height: 55px;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 25%;
+}
+
+.gcarbox .gcarBtm ul.glist1 li {
+	float: left;
+	line-height: 40px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.gcarbox .gcarBtm ul.glist1 li img {
+	width: 18px;
+	height: 18px;
+}
+
+.gcarbox .gcarBtm ul.glist2 {
+	/***中***/
+	width: 1280px;
+	height: 20px;
+	text-align: center;
+	position: absolute;
+	top: 40px;
+	left: 30%;
+}
+
+.gcarbox .gcarBtm ul.glist2 li {
+	float: left;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.gcarbox .gcarBtm ul.glist3 {
+	/***下***/
+	width: 1280px;
+	height: auto;
+	position: absolute;
+	top: 70px;
+	left: 460px;
+}
+
+.gcarbox .gcarBtm ul.glist3 li {
+	float: left;
+	margin-right: 10px;
+}

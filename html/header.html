@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>头部</title>
+
+		<!--所有页面的头部-->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<!--重置样式-->
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<!--公用样式-->
+		<script src="../assets/jquery-1.12.0.js" type="text/javascript" charset="utf-8"></script>
+		<!--jq文件-->
+
+		<script type="text/javascript">
+			$(function() {
+
+				//我的账户下拉
+				var $myuser = $(".header p.myuser");
+				var $header_li_myuser = $(".header ul li:eq(2)");
+				$myuser.hide(); //我的账户子菜单默认是隐藏的
+				$header_li_myuser.on("mouseover", function() { //鼠标滑进去就显示
+					$myuser.show();
+				}).on("mouseout", function() { //划出就隐藏
+					$myuser.hide();
+				})
+				$myuser.children().on("mouseover", function() { //在列表里面移动就显示
+					$myuser.show();
+				}).on("mouseleave", function() { //移出就隐藏
+					$myuser.hide();
+				});
+
+				//我的手机下拉
+				var $myphone = $(".myphone");
+				var $header_li_myphone = $(".header ul li:eq(3)");
+				$myphone.hide(); //我的手机默认是隐藏的
+				$header_li_myphone.on("mouseover", function() { //鼠标移进去就显示
+					$myphone.show();
+				}).on("mouseout", function() { //移出就隐藏
+					$myphone.hide();
+				})
+				$myphone.on("mouseover", function() { //移进去就显示
+					$myphone.show();
+				}).on("mouseleave", function() { //移出就隐藏
+					$myphone.hide();
+				});
+
+				//detailbtn
+				var $detailbtn = $("#detailbtn");
+				$detailbtn.on("click", function() {
+					$(this).load("list.html");
+				});
+
+			})
+		</script>
+
+	</head>
+
+	<body>
+
+		<div class="header">
+			<!--头部（最上头+ logo搜索框）-->
+			<div class="header_top">
+				<!--最上头-->
+				<!--<左边>-->
+				<span>
+						<span class="header_span">234567</span>位会员选择
+				<span class="header_denglu"><a href="login.html">登录&ensp;</a>|<a href="regist.html">注册</a></span>
+				</span>
+				<!--<右边>-->
+				<ul class="header_top_right">
+					<li>
+						<a href="#">会员俱乐部</a>
+					</li>
+					<li>
+						<a href="#">签到</a>
+					</li>
+					<li>
+						<a href="#">我的账户<img src="../css/img/sanjiao.jpg" /></a>
+					</li>
+					<li>
+						<a href="#" class="phone"><img src="../css/img/phonelogo.png" />手机版</a>
+					</li>
+					<li>
+						<a href="#">红酒交易中心</a>
+					</li>
+					<li>
+						<a href="#">也买服务</a>
+					</li>
+					<li>
+						<a href="#" class="no_border">设置勿扰</a>
+					</li>
+				</ul>
+
+			</div>
+
+			<!--logo搜索框-->
+			<div class="header_logo">
+				<!--左边的logo-->
+				<a href="index.html"><img src="../images/logo.jpg" /></a>
+
+				<!--右边的搜索框-->
+				<form class="goods_form">
+					<input type="text" name="goodsname" value="" placeholder="请输入你要查找的商品" />
+					<!--输入框-->
+					<b class="search" id="detailbtn"><a href="list.html">搜索</a></b>
+					<p class="gcar" id="gcar">
+						<a href="gcar.html"><img src="../css/img/car.png" />购物车</a>
+					</p>
+					<span>
+							<a href="list.html">薄若莱2016新酒预订</a>
+							<a href="list.html">也买酒学院</a><a href="list.html">婚庆酒</a>
+							<a href="list.html">特色陈年老酒</a><a href="list.html">名庄酒</a>
+						</span>
+				</form>
+
+			</div>
+
+			<!--头部的两个下拉框-->
+			<p class="myuser">
+				<!--我的账户下拉框-->
+				<a href="#">我的订单</a>
+				<a href="#">我的优惠券</a>
+				<a href="#">我的收藏夹</a>
+			</p>
+			<p class="myphone">
+				<!--我的手机下拉框-->
+				<span>APP首单满<span>100得100</span></span>
+				<img class="er" src="../css/img/red-code.png" />
+				<img class="ios" src="../css/img/ios.png" />
+				<img class="android" src="../css/img/android.png" />
+			</p>
+
+		</div>
+
+	</body>
+
+</html>

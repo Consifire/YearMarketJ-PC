@@ -1,0 +1,10 @@
+
+/*******放大镜的样式*******/
+
+.xzoom{position:relative;} /*图片大框*/
+.xzoom .xzoom-min{position:absolute;top:0;left:0;width:100px;height:50px;border:1px solid gray;background-color:rgba(127,127,127,0.3)}  /*放大镜*/
+
+
+/*大图外框*/
+.xzoom-big{position:absolute;width:300px;height:300px;overflow:hidden;background: white;}
+.xzoom-big img{position:absolute;left:0;top:0;} /*大图里的图片*/

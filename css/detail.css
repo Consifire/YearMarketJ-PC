@@ -1,0 +1,1094 @@
+/****************************详情页(放大镜+cookie)***********************/
+
+
+/******详情页大盒子********/
+
+.detailbox {
+	width: 1280px;
+	/*1280-160-160*/
+	height: 5300px;
+	margin: 0 auto;
+	position: relative;
+	/*为了后面的固定条*/
+}
+
+
+/**********************header头部**************************/
+
+.header_top {
+	width: 958px;
+	height: 29px;
+	padding: 0 160px;
+	border: 1px solid rgb(235, 231, 227);
+	background: rgb(236, 231, 227);
+	line-height: 29px;
+	margin: 0 auto;
+}
+
+.header .header_top span.header_span {
+	/*会员的*/
+	color: red;
+	margin-top: 10px;
+	font-weight: 600;
+	/*加粗字体*/
+}
+
+.header .header_top span.header_denglu a {
+	/*登录|注册*/
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.header .header_top span.header_denglu a:hover {
+	/*登录|注册*/
+	color: rgb(211, 22, 27);
+	/*鼠标滑过显示的颜色*/
+}
+
+.header .header_top ul.header_top_right {
+	/*右边列表*/
+	float: right;
+}
+
+.header .header_top ul.header_top_right li {
+	/*右边列表的Li*/
+	float: left;
+}
+
+.header .header_top ul.header_top_right li a {
+	/*右边列表的Li里面的a标签*/
+	border-right: 1px solid rgb(156, 140, 134);
+	padding: 0 7px;
+}
+
+.header .header_top ul.header_top_right li a:hover {
+	/*右边列表的Li里面的a标签*/
+	color: rgb(161, 16, 17);
+}
+
+.header .header_top ul.header_top_right li a.no_border {
+	/*右边列表的Li里面的a标签最后一个无边*/
+	border-right: none;
+}
+
+.header .header_top ul.header_top_right li a.phone img {
+	/*右边列表的Li里面的a标签里面的手机小图标*/
+	margin-right: 2px;
+	width: 20px;
+	height: 17px;
+	line-height: 30px;
+}
+
+
+/********************logo图标********************/
+
+.header .header_logo {
+	width: 960px;
+	height: 100px;
+	padding: 0 160px;
+	position: relative;
+	background: #f1eeed;
+	margin: 0 auto;
+}
+
+.header .header_logo img {
+	display: block;
+	position: absolute;
+	top: 10px;
+}
+
+
+/********************搜索框 按钮 购物车********************/
+
+.header .header_logo .goods_form {
+	/* 表单form,定位*/
+	position: relative;
+	left: 380px;
+	top: 30px;
+}
+
+.header .header_logo .goods_form input {
+	border: 1px solid red;
+	width: 380px;
+	height: 35px;
+	line-height: 35px;
+}
+
+.header .header_logo .goods_form p.search {
+	/*搜索框*/
+	display: inline-block;
+	width: 80px;
+	height: 35px;
+	background: rgb(211, 22, 27);
+	color: white;
+	text-align: center;
+	line-height: 35px;
+}
+
+.header .header_logo .goods_form p.search a {
+	/*搜索框*/
+	color: white;
+}
+
+.header .header_logo .goods_form p.gcar {
+	/*购物车*/
+	width: 100px;
+	height: 35px;
+	background: rgb(211, 22, 27);
+	text-align: right;
+	line-height: 35px;
+	position: absolute;
+	top: 1px;
+	left: 478px;
+	color: white;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: bolder;
+}
+
+.header .header_logo .goods_form p.gcar img {
+	/*购物车logo图片*/
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	left: 6px;
+	top: 4px;
+}
+
+.img img {
+	/*放大镜里面的图片*/
+	width: 380px;
+	height: 620px;
+}
+
+.header .header_logo .goods_form p.gcar a {
+	/*购物车*/
+	color: white;
+	margin-right: 5px;
+	text-decoration: none;
+}
+
+.header .header_logo .goods_form .gcar:hover {
+	background: #a11011;
+	color: black;
+}
+
+.header .header_logo .goods_form span {
+	margin-top: 3px;
+	display: block;
+}
+
+.header .header_logo .goods_form span a {
+	margin-left: 8px;
+}
+
+.header .header_logo .goods_form span a:hover {
+	color: rgb(161, 16, 17);
+}
+
+
+/******右侧的固定条******/
+
+.fixedbox {
+	width: 34px;
+	height: 5100px;
+	background: rgb(126, 0, 1);
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding-top: 200px;
+}
+
+.fixedbox a.fixedbox_top {
+	padding-top: 150px;
+}
+
+.fixedbox li {
+	width: 34px;
+	height: auto;
+	background: none;
+}
+
+.fixedbox li:hover {
+	background: rgb(126, 0, 1);
+}
+
+.fixedbox div#addgoods {
+	/*购物车添加会变化*/
+	width: 34px;
+	height: 34px;
+	border-radius: 30%;
+	color: white;
+	background: grey;
+	text-align: center;
+	line-height: 30px;
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
+
+/*********************导航条及下拉菜单的css样式*********************/
+
+.nav {
+	/*导航条*/
+	width: 960px;
+	padding: 0 160px;
+	height: 35px;
+	background: rgb(211, 22, 27);
+	/*背景色*/
+	font-size: 14px;
+}
+
+.nav ul {
+	position: absolute;
+}
+
+.nav ul.nav_ul li {
+	float: left;
+	padding-right: 18px;
+	padding-left: 18px;
+}
+
+.nav ul.nav_ul li:hover {
+	background: rgb(188, 0, 1);
+}
+
+.nav ul.nav_ul li a:hover {
+	text-decoration: none;
+}
+
+.nav ul.nav_ul li a {
+	/* li列表下面*/
+	color: white;
+	/*覆盖之前的字体颜色*/
+	line-height: 35px;
+	border-right: 1px solid rbg(177, 30, 25);
+}
+
+.nav ul.nav_ul p {
+	/*对p选酒中心设置*/
+	display: inline-block;
+	/* 装成行内块元素*/
+	float: left;
+	/*浮动才能在列表的左边*/
+}
+
+.nav ul.nav_ul p a.choosemid {
+	/*对选酒中心设置,也就是li下面p，单独设置*/
+	display: inline-block;
+	/* 转为行内块元素*/
+	font-family: "微软雅黑";
+	font-weight: bolder;
+	width: 200px;
+	height: 35px;
+	color: #fff;
+	line-height: 35px;
+	background: rgb(161, 16, 17);
+	letter-spacing: 5px;
+	/* 控制文字的间距为5px 美观*/
+}
+
+.nav ul.nav_ul p a.choosemid:hover {
+	/*鼠标滑过,去掉下划线*/
+	text-decoration: none;
+}
+
+.nav ul.nav_ul p a.choosemid img {
+	/* 选酒中心的小图标*/
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+/******************详情页内容detailcont******************/
+
+.detailbox .detailcont {
+	width: 960px;
+	height: 600px;
+	padding: 0 160px;
+	background: #fbfaf9;
+}
+
+.detailbox .detailcont p {
+	/*检索的内容目录级*/
+	width: 960px;
+	height: 38px;
+	line-height: 38px;
+}
+
+.detailbox .detailcont p a {
+	/*内容间隔*/
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.detailbox .detailcont .detailleftcon {
+	/*内容左边*/
+	width: 380px;
+	height: 630px;
+	float: left;
+}
+
+.detailbox .detailcont .detailrightcon {
+	/*内容右边*/
+	width: 560px;
+	height: 630px;
+	float: left;
+	margin-left: 20px;
+}
+
+.detailbox .detailcont .detailleftcon div.img {
+	width: 380px;
+	height: 360px;
+	border: 1px solid rgb(203, 203, 203);
+	background: #FFF;
+}
+
+.detailbox .detailcont .detailleftcon .img img {
+	display: block;
+	width: 220px;
+	height: 360px;
+	position: absolute;
+}
+
+.detailbox .detailcont .detailleftcon li {
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.detailbox .detailcont .detailleftcon li>img {
+	display: block;
+	width: 50px;
+	height: 68px;
+	border: 1px solid #f1edea;
+}
+
+.detailbox .detailcont .detailleftcon p.clickp,
+b.goodsid {
+	/*商品ID和点击链接*/
+	display: block;
+	clear: both;
+}
+
+.detailbox .detailcont .detailleftcon b.goodsid {
+	font-weight: normal;
+	height: 60px;
+	line-height: 60px;
+	margin-left: 75px;
+}
+
+.detailbox .detailcont .detailleftcon p.clickp .span1 {
+	/*点击链接*/
+	margin-left: 20px;
+}
+
+
+/********内容右边*************/
+
+.detailbox .detailcont .detailrightcon h3 {
+	/*标题*/
+	color: #000000;
+	font-size: 14px;
+	font-weight: bolder;
+}
+
+.detailbox .detailcont .detailrightcon span.margin {
+	/*JH*/
+	display: inline-block;
+	background: #d83d3d;
+	text-align: center;
+	line-height: 18px;
+	color: white;
+	height: 18px;
+	width: 24px;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+	margin-left: 8px;
+}
+
+.detailbox .detailcont .detailrightcon span.margin2 {
+	/*  85*/
+	display: inline-block;
+	text-align: center;
+	line-height: 16px;
+	color: #7e0001;
+	height: 16px;
+	width: 23px;
+	border: 1px solid #d83d3d;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.detailbox .detailcont .detailrightcon li.sp {
+	/*商品评分*/
+	height: 44px;
+	line-height: 44px;
+	border-bottom: 1px solid #e6e1db;
+}
+
+.detailbox .detailcont .detailrightcon li.sp span {
+	/*评论数的颜色*/
+	margin-left: 12px;
+}
+
+.detailbox .detailcont .detailrightcon li.sp span>b {
+	/*搭配菜肴*/
+	color: #0099cc;
+}
+
+.detailbox .detailcont .detailrightcon li.cx {
+	/*促销信息*/
+	height: 60px;
+	line-height: 60px;
+}
+
+.detailbox .detailcont .detailrightcon li.cx span {
+	/*商品折扣文字*/
+	display: inline-block;
+	background: #d83d3d;
+	text-align: center;
+	line-height: 18px;
+	color: white;
+	height: 18px;
+	width: 60px;
+	border-radius: 3px;
+}
+
+.detailbox .detailcont .detailrightcon li.price {
+	width: auto;
+	height: 68px;
+	line-height: 68px;
+}
+
+.detailbox .detailcont .detailrightcon li.price span {
+	/*价格标红*/
+	color: rgb(204, 0, 0);
+}
+
+.detailbox .detailcont .detailrightcon li.price span.bigsize {
+	/*价格变大,￥不变大*/
+	font-size: 30px;
+}
+
+.detailbox .detailcont .detailrightcon li.zk {
+	/*促销折扣*/
+	width: 300px;
+	height: 52px;
+	text-align: center;
+	background: #FFFFFF;
+	border: 1px solid #e6e1db;
+}
+
+.detailbox .detailcont .detailrightcon li.zk span {
+	/*里面分区*/
+	display: inline-flex;
+	width: 130px;
+	height: 50px;
+	line-height: 50px;
+	border-right: 1px solid #e6e1db;
+	text-align: center;
+	padding-left: 10px;
+	background: #FFFFFF;
+}
+
+.detailbox .detailcont .detailrightcon li.zk span.color-g {
+	/*里面分区*/
+	display: inline-flex;
+	width: 130px;
+	height: 50px;
+	line-height: 50px;
+	border-right: none
+}
+
+.detailbox .detailcont .detailrightcon li.zk span big {
+	/*里面分区*/
+	color: #009900;
+	font-size: 16px;
+	font-weight: bolder;
+}
+
+.detailbox .detailcont .detailrightcon li.zk span b {
+	/*里面分区*/
+	font-size: 16px;
+	font-weight: bolder;
+}
+
+.detailbox .detailcont .detailrightcon ul.bgk {
+	/*配送地点*/
+	width: 514px;
+	height: 144px;
+	padding: 22px 0 22px 20px;
+	background: #ffffe8;
+	border: 1px dashed #fec083;
+	margin-top: 14px;
+}
+
+.detailbox .detailcont .detailrightcon ul.bgk li {
+	/*li行高的*/
+	height: 40px;
+	line-height: 40px;
+}
+
+.detailbox .detailcont .detailrightcon ul.bgk li.ps b {
+	/*配送前面字体加粗*/
+	font-weight: 900;
+	color: #333;
+}
+
+.detailbox .detailcont .detailrightcon ul.bgk li.ps span {
+	/*配送广东标红*/
+	color: rgb(204, 0, 0);
+	font-weight: bolder;
+}
+
+
+/*数量选择sl*/
+
+.detailbox .detailcont .detailrightcon ul.bgk li.sl p.jia {
+	/*数量选择加和减*/
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	line-height: 14px;
+	text-align: center;
+	font-size: 18px;
+	margin-left: 10px;
+	color: rgb(139, 139, 139);
+	background: #f0ede9;
+	border: 1px solid #e6e1db;
+	cursor: pointer;
+}
+
+.detailbox .detailcont .detailrightcon ul.bgk li.sl p.jian {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	line-height: 14px;
+	text-align: center;
+	font-size: 18px;
+	color: rgb(139, 139, 139);
+	background: #f0ede9;
+	border: 1px solid #e6e1db;
+	cursor: pointer;
+}
+
+.detailbox .detailcont .detailrightcon ul.bgk li.sl p#value {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	text-align: center;
+	font-size: 14px;
+	color: #000;
+	background: #FFFFFF;
+	border: 1px solid #e6e1db;
+}
+
+.detailbox .detailcont .detailrightcon ul.bgk li.sl p.addgcar {
+	/*数量选择加和减*/
+	width: 210px;
+	height: 44px;
+	line-height: 44px;
+	text-align: center;
+	font-size: 20px;
+	margin-top: 10px;
+	color: #FFF;
+	font-family: "微软雅黑";
+	background: rgb(210, 67, 67);
+	cursor: pointer;
+}
+
+
+/****************放大镜下面的详情内容*****************/
+
+
+/***********1.详情top************/
+
+.detailbox .detail_top {
+	width: 960px;
+	height: 246px;
+	margin: 0 auto;
+}
+
+.detailbox .detail_top ul.ul_de1 {
+	width: 961px;
+	height: 39px;
+	overflow: hidden;
+	border-bottom: 2px solid #86584a;
+	border-top: 1px solid #e6e1db;
+	background: #f3f0ed;
+}
+
+.detailbox .detail_top ul.ul_de1 li {
+	/*上面的导航*/
+	width: 139px;
+	height: 39px;
+	font-size: 14px;
+	line-height: 39px;
+	text-align: center;
+	float: left;
+	border-right: 1px solid #86584a;
+}
+
+.detailbox .detail_top ul.ul_de1 li.del_bg {
+	/*li*/
+	background: #86584a;
+}
+
+.detailbox .detail_top ul.ul_de1 li.del_bg a {
+	/*li*/
+	color: white;
+}
+
+.detailbox .detail_top ul.ul_de1 li a {
+	/*字体*/
+	width: 139px;
+	height: 14px;
+	font-size: 14px;
+	line-height: 39px;
+	color: #86584a;
+	text-align: center;
+	float: left;
+}
+
+
+/*******************2.一个列表 ,个小列表显示详情***************/
+
+
+/****ul_de  2-5***/
+
+.detailbox .detail_top .ul_list {
+	width: 960px;
+	height: 140px;
+	overflow: hidden;
+	border-bottom: 1px solid #e6e1db;
+	border-right: 1px solid #e6e1db;
+	border-left: 1px solid #e6e1db;
+}
+
+.detailbox .detail_top .ul_list ul {
+	float: left;
+	width: 218px;
+	height: 120px;
+	margin: 10px;
+	margin-top: 20px;
+	border-right: 1px dashed #CCCCCC;
+	font-weight: bolder;
+	color: #666666;
+}
+
+.detailbox .detail_top .ul_list ul li {
+	height: 25px;
+	line-height: 25px;
+}
+
+.detailbox .detail_top .ul_list ul.ul_de5 {
+	border-right: none;
+}
+
+.detailbox .detail_top .ul_list ul span {
+	display: inline-block;
+	margin-left: 10px;
+	font-weight: normal;
+}
+
+
+/***********3.图片显示************/
+
+.detailbox .xqimage {
+	/*中间图片*/
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 960px;
+	height: 750px;
+}
+
+.detailbox .xqimage .width1 {
+	/*大图片修改宽高*/
+	width: 960px;
+	height: auto;
+}
+
+
+/**********4.一个表单列表********/
+
+.detailbox .de_form {
+	/*表单*/
+	width: 900px;
+	height: 2820px;
+	margin: 0 auto;
+	padding: 30px;
+	border: 1px solid #e6e1db;
+	margin-bottom: 20px;
+}
+
+.detailbox .de_form fieldset {
+	/*友情提示内容*/
+	font-size: 17px;
+	height: 70px;
+	line-height: 30px;
+	color: #333;
+	border: none;
+	border-top: 1px solid #333;
+}
+
+.detailbox .de_form fieldset legend {
+	/*友情提示*/
+	color: #cc0e0e;
+}
+
+
+/****第二个字符集****/
+
+.detailbox .de_form fieldset.fieldset2 {
+	width: auto;
+	height: 560px;
+}
+
+.detailbox .de_form fieldset ul {
+	/* ul*/
+	width: 897px;
+	height: 230px;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.detailbox .de_form fieldset ul li.i {
+	/*li下面的图片*/
+	float: left;
+}
+
+.detailbox .de_form fieldset ul li.des {
+	/*li下面的文字*/
+	float: left;
+	width: 540px;
+	height: 200px;
+	font-size: 13px;
+	margin-left: 10px;
+}
+
+.detailbox .de_form fieldset ul li.des b {
+	/*li下面的文字 的标题*/
+	display: block;
+	font-size: 16px;
+}
+
+
+/*给高度不然就会塌陷,后面的会浮动上来*/
+
+
+/*第4-7个字符集*/
+
+.detailbox .de_form fieldset.fieldset3 {
+	width: auto;
+	height: 304px;
+}
+
+.detailbox .de_form fieldset.fieldset5 {
+	width: auto;
+	height: 295px;
+}
+
+.detailbox .de_form fieldset.fieldset6 {
+	width: auto;
+	height: 540px;
+}
+
+.detailbox .de_form fieldset.fieldset6 ul {
+	/* ul*/
+	width: 897px;
+	height: 250px;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.detailbox .de_form fieldset.fieldset7 {
+	width: auto;
+	height: 360px;
+}
+
+
+/********************底部foot**************************/
+
+.foot {
+	margin: 0 auto;
+	width: 1280px;
+	height: auto;
+}
+
+.foot .foot_top {
+	/*头部第一块*/
+	width: 960px;
+	height: 400px;
+	padding: 0 160px;
+	background: rgb(232, 232, 232);
+}
+
+.foot .foot_top ul {
+	/*三个区块浮动*/
+	float: left;
+}
+
+
+/******列表1******/
+
+.foot .foot_top .top_list1 {
+	/*对列表1设置*/
+	width: 300px;
+	height: 400px;
+	border-left: 1px solid rgb(220, 215, 207);
+	border-right: 1px solid rgb(220, 215, 207);
+	margin-left: 40px;
+}
+
+.foot .foot_top .top_list1 h3 {
+	/*红色标题*/
+	height: 60px;
+	line-height: 60px;
+	color: rgb(190, 16, 46);
+	font-size: 16px;
+	font-weight: bolder;
+	margin-left: 30px;
+}
+
+.foot .foot_top .top_list1 li {
+	margin-left: 30px;
+	height: 60px;
+}
+
+.foot .foot_top .top_list1 li>span {
+	float: left;
+	margin-right: 20px;
+}
+
+.foot .foot_top .top_list1 li>dl {
+	float: left;
+}
+
+.foot .foot_top .top_list1 li>dl dt>a {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 900;
+}
+
+
+/******列表2******/
+
+.foot .foot_top .top_list2 {
+	width: 319px;
+	height: 400px;
+	border-right: 1px solid rgb(220, 215, 207);
+}
+
+.foot .foot_top .top_list2 h3 {
+	/*红色标题*/
+	height: 50px;
+	line-height: 60px;
+	color: rgb(190, 16, 46);
+	font-size: 16px;
+	font-weight: bolder;
+	margin-left: 30px;
+}
+
+.foot .foot_top .top_list2 li {
+	float: left;
+	width: 105px;
+}
+
+.foot .foot_top .top_list2 li>h4 {
+	/*小标题*/
+	line-height: 14px;
+	font-size: 12px;
+	color: rgb(127, 127, 127);
+	margin-top: 14px;
+	margin-left: 30px;
+	margin-bottom: 4px;
+}
+
+.foot .foot_top .top_list2 li>a {
+	/*小标题*/
+	display: block;
+	line-height: 20px;
+	font-size: 12px;
+	margin-left: 30px;
+}
+
+
+/******列表3******/
+
+.foot .foot_top .top_list3 {
+	width: 280px;
+	height: 400px;
+	border-right: 1px solid rgb(220, 215, 207);
+}
+
+.foot .foot_top .top_list3 h3 {
+	/*红色标题*/
+	height: 60px;
+	line-height: 60px;
+	color: rgb(190, 16, 46);
+	font-size: 16px;
+	font-weight: bolder;
+	margin-left: 30px;
+}
+
+.foot .foot_top .top_list3 li {
+	/*APP图标*/
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.foot .foot_top .top_list3 li>h4 {
+	/*小标题*/
+	line-height: 14px;
+	font-size: 12px;
+	color: rgb(127, 127, 127);
+	margin-top: 14px;
+	margin-left: 30px;
+	margin-bottom: 10px;
+}
+
+.foot .foot_top .top_list3 li>a {
+	/*APP图标*/
+	margin-left: 10px;
+	margin-bottom: 4px;
+}
+
+.foot .foot_top .top_list3 li#dl a {
+	float: left;
+}
+
+.foot .foot_top .top_list3 li#dl dl {
+	/*微信文字*/
+	display: inline;
+	width: 130px;
+	height: 60px;
+	margin-left: 30px;
+	float: left;
+}
+
+.foot .foot_top .top_list3 li#dl dl>dt.dt {
+	/*APP图标*/
+	font-size: 14px;
+	font-weight: bolder;
+	color: #666666;
+	margin-bottom: 4px;
+}
+
+.foot .foot_top .top_list3 li#sina {
+	margin-top: 20px;
+}
+
+.foot .foot_top .top_list3 li#sina a {
+	float: left;
+}
+
+.foot .foot_top .top_list3 li#sina a#inlne {
+	/*新浪微博*/
+	display: inline-block;
+	width: auto;
+	height: 12px;
+}
+
+.foot .foot_top .top_list3 li#sina a#tips {
+	/*立即关注*/
+	display: inline;
+	margin-left: 10px;
+	margin-top: 2px;
+}
+
+
+/********************foot_mid中部***********************/
+
+.foot_mid ul {
+	width: 845px;
+	height: 38px;
+	line-height: 38px;
+	background: #f8f8f5;
+	text-align: center;
+	padding: 0 0 0 435px;
+}
+
+.foot_mid ul#midlist li {
+	padding-left: 14px;
+	float: left;
+}
+
+.foot_mid ul li a {
+	border-right: 1px solid #a27692;
+	padding-right: 14px;
+}
+
+.foot_mid ul li.borderno a {
+	border-right: none;
+}
+
+
+/**************底部bottom********************/
+
+.foot .registBtm {
+	width: 1280px;
+	height: 165px;
+	position: relative;
+}
+
+.foot .registBtm .glist1 {
+	width: 1280px;
+	height: 55px;
+}
+
+.foot .registBtm ul.glist1 {
+	/***上***/
+	width: 1280px;
+	height: 55px;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 25%;
+}
+
+.foot .registBtm ul.glist1 li {
+	float: left;
+	line-height: 40px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.foot .registBtm ul.glist1 li img {
+	width: 18px;
+	height: 18px;
+}
+
+.foot .registBtm ul.glist2 {
+	/***中***/
+	width: 1280px;
+	height: 20px;
+	text-align: center;
+	position: absolute;
+	top: 40px;
+	left: 30%;
+}
+
+.foot .registBtm ul.glist2 li {
+	float: left;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.foot .registBtm ul.glist3 {
+	/***下***/
+	width: 1280px;
+	height: auto;
+	position: absolute;
+	top: 70px;
+	left: 460px;
+}
+
+.foot .registBtm ul.glist3 li {
+	float: left;
+	margin-right: 10px;
+}

@@ -1,0 +1,1841 @@
+/***********************我的整个主页***********************/
+
+
+/**********我的整个页面myWeb**********/
+
+.myWeb {
+	width: 1280px;
+	height: 7300px;
+	background: #FFFFFF;
+	/*白色背景*/
+	margin: 0px auto;
+	/*居中显示*/
+}
+
+
+/*******购物车固定盒子*******/
+
+.fixedbox {
+	/* 购物车固定盒子*/
+	width: 140px;
+	height: 28px;
+	background: url(../css/img/backg.jpg) repeat-x;
+	/*背景*/
+	position: fixed;
+	bottom: 0;
+	right: 20px;
+}
+
+.fixedbox img {
+	/*下面有个小logo*/
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	left: 14px;
+	top: 2px;
+}
+
+.fixedbox a {
+	/*里面的文字进行样式修改*/
+	font-size: 16px;
+	color: white;
+	text-decoration: none;
+	font-weight: bolder;
+	position: absolute;
+	left: 50px;
+	line-height: 28px;
+}
+
+.fixedbox a:hover {
+	/*滑过去掉下划线*/
+	text-decoration: none;
+}
+
+
+/***********内容部分content**********/
+
+.myWeb .content {
+	/*内容部分*/
+	width: 1200px;
+	height: 6390px;
+	padding: 0 40px;
+	margin-top: 505px;
+}
+
+.content .contlb {
+	/*第一块轮播图*/
+	width: 1200px;
+	height: 375px;
+	margin-top: 10px;
+}
+
+.content .contlb .contlb_left {
+	/*第一块左边*/
+	width: 200px;
+	height: 369px;
+	border: 1px solid #bfb7aa;
+	float: left;
+	overflow: hidden;
+}
+
+.content .contlb .contlb_left ul.typelist h3 {
+	/*ul标题*/
+	width: 65.5px;
+	height: 30px;
+	border: 1px solid #bfb7aa;
+	border-right: none;
+	background: #e0dbd8;
+	color: #5c483d;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+	float: left;
+}
+
+.content .contlb .contlb_left ul.ullist li {
+	/*第一块左边*/
+	width: 175px;
+	height: 24px;
+	line-height: 24px;
+	list-style-type: circle;
+	list-style: circle;
+	margin-left: 8px;
+	overflow: hidden;
+}
+
+.content .contlb .contlb_right {
+	/*第一块右边*/
+	width: 990px;
+	height: 375px;
+	float: right;
+	overflow: hidden;
+}
+
+.content .contlb .contlb_right .contlb_right_top {
+	/*右边的标题*/
+	width: 992px;
+	height: 60px;
+	border-bottom: 2px solid #d3161b;
+}
+
+.content .contlb .contlb_right .contlb_right_top h3 {
+	/*右边的标题下面的h3*/
+	width: 196px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	margin: 0;
+	padding: 0;
+	background: #ffe8e8;
+	margin-right: 2px;
+	font-size: 20px;
+	float: left;
+}
+
+.content .contlb .contlb_right .contlb_right_top h3:hover {
+	/*鼠标滑过改变背景颜色h3*/
+	background: #d3161b;
+	color: white;
+	cursor: pointer;
+}
+
+.content .contlb .contlb_right ul.rbtmlist1 {
+	/* 一个ul*/
+	width: 986px;
+	height: 305px;
+	margin-top: 10px;
+}
+
+.content .contlb .contlb_right ul.rbtmlist1 li {
+	/* 一个ul下面有5个li*/
+	width: 180px;
+	height: 298px;
+	border: 2px solid #e5e5e5;
+	margin-left: 13px;
+	float: left;
+}
+
+.content .contlb .contlb_right ul.rbtmlist1 li img {
+	/* li图片位置*/
+	margin-left: 20%;
+	margin-top: 5px;
+}
+
+.content .contlb .contlb_right ul.rbtmlist1 li h4 {
+	/* li标题*/
+	height: 47px;
+	line-height: 17px;
+	padding: 10px 0 0 10px;
+	background: #f4f4f0;
+	margin: 0;
+}
+
+.content .contlb .contlb_right ul.rbtmlist1 li p {
+	/* li价钱*/
+	height: 27px;
+	line-height: 27px;
+	background: #f4f4f0;
+	color: #d3161b;
+	font-size: 20px;
+	padding-left: 10px;
+}
+
+.content .contlb .contlb_right ul.rbtmlist1 li span {
+	/* li价钱*/
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	padding-left: 10px;
+}
+
+
+/********2.猜你喜欢**********/
+
+.content .conthobby {
+	/*第二个盒子*/
+	width: 1198px;
+	height: 410px;
+	margin-top: 38px;
+}
+
+.content .conthobby h3.chobby {
+	/*猜你喜欢标题*/
+	width: 1200px;
+	height: 30px;
+	display: inline-block;
+	line-height: 30px;
+	padding: 0 0 0 5px;
+	color: #333333;
+	font-size: 24px;
+	margin-bottom: 6px;
+	border-left: 6px solid #d3161b;
+}
+
+.content .conthobby h3 span {
+	/*猜你喜欢右边文字*/
+	width: 1000px;
+	font-weight: normal;
+	color: #999999;
+	font-size: 15px;
+	margin-left: 10px;
+}
+
+.content .conthobby .conthobby_left {
+	/*猜你喜欢左边*/
+	float: left;
+	width: 300px;
+	height: 375px;
+	background: #edf4f8;
+	border: 1px solid #e7e7e7;
+	border-top: 2px solid #d3161b;
+}
+
+.content .conthobby .conthobby_right {
+	/*猜你喜欢右边*/
+	float: left;
+	width: 896px;
+	height: 373px;
+	border-top: 2px solid #d3161b;
+}
+
+.content .conthobby .conthobby_left h2 {
+	/*猜你喜欢专属推荐*/
+	color: #009ffa;
+	font-size: 22px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+.content .conthobby .conthobby_left ul.zs li {
+	/*猜你喜欢专属推荐*/
+	font-size: 20px;
+	width: auto;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+}
+
+.content .conthobby .conthobby_left ul.zs li a {
+	/*猜你喜欢专属推荐*/
+	margin-right: 5px;
+	margin-top: 40px;
+	margin-left: 10px;
+}
+
+.content .conthobby .conthobby_left ul.zs li a img {
+	/*猜你喜欢专属推荐*/
+	width: 40px;
+	height: 40px;
+	margin-top: 20px;
+}
+
+
+/*********2.猜你喜欢右边***********/
+
+.content .conthobby .conthobby_right ul {
+	/*猜你喜欢右边介绍*/
+	width: 296px;
+	height: 185px;
+	border: 1px solid #ebebe8;
+	float: left;
+}
+
+.content .conthobby .conthobby_right ul li {
+	/*猜你喜欢右*/
+	float: left;
+}
+
+.content .conthobby .conthobby_right ul li h3>a {
+	/*猜你喜欢右*/
+	color: #663333;
+	margin: 0;
+	padding: 0;
+}
+
+.content .conthobby .conthobby_right ul li img {
+	/*猜你喜欢右*/
+	width: 80px;
+	height: 130px;
+	margin-top: 20px;
+	margin-right: 10px;
+}
+
+.content .conthobby .conthobby_right ul li big {
+	/*猜你喜欢右*/
+	display: block;
+	color: #d3161b;
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+
+/************3.专业特色专题***********/
+
+.content .plus h3.chobby {
+	/*专业特色专题标题*/
+	width: 1200px;
+	height: 30px;
+	display: inline-block;
+	line-height: 30px;
+	padding: 0 0 0 5px;
+	color: #333333;
+	font-size: 24px;
+	margin-bottom: 6px;
+	border-left: 6px solid #d3161b;
+}
+
+.content .plus h3 span {
+	/*专业特色专题标题*/
+	width: 1000px;
+	font-weight: normal;
+	color: #999999;
+	font-size: 15px;
+	margin-left: 10px;
+}
+
+.content .plus ul {
+	width: 1200px;
+	height: 437px;
+	border-top: 2px solid #cc3333;
+	overflow: hidden;
+}
+
+.content .plus ul.pluslist li.pl1 {
+	float: left;
+	width: 452px;
+	height: 436px;
+	margin-right: 9px;
+}
+
+.content .plus ul.pluslist li.pl2 a {
+	float: left;
+	width: 364px;
+	height: 212px;
+	margin-right: 5.5px;
+	margin-bottom: 6px;
+}
+
+
+/************4.品牌汇***********/
+
+.content .pph h3.chobby {
+	/*品牌汇标题*/
+	width: 1200px;
+	height: 30px;
+	display: inline-block;
+	line-height: 30px;
+	padding: 0 0 0 5px;
+	color: #333333;
+	font-size: 24px;
+	margin-bottom: 6px;
+	border-left: 6px solid #d3161b;
+}
+
+.content .pph {
+	width: 1200px;
+	height: 431px;
+	float: left;
+}
+
+.content .pph ul.pph1 {
+	/*上面的改变宽高*/
+	width: 1200px;
+	height: 250px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	border-top: 2px solid #d3161b;
+}
+
+.content .pph ul.pph1 li {
+	float: left;
+	width: 150px;
+	height: 250px;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+}
+
+
+/*pph2*/
+
+.content .pph ul.pph2 {
+	width: 100%;
+	height: 130px;
+	overflow: hidden;
+}
+
+.content .pph ul.pph2 li {
+	width: 218px;
+	height: 110px;
+	padding: 10px;
+	margin: 0;
+	border: 1px solid #ebebe8;
+	border-top: none;
+	float: left;
+	overflow: hidden;
+}
+
+.content .pph ul.pph2 li img {
+	width: 320px;
+	height: 110px;
+	position: relative;
+	overflow: hidden;
+}
+
+
+/************5.进口葡萄酒***********/
+
+.content .import {
+	width: 1200px;
+	height: 320px;
+	position: relative;
+	overflow: hidden;
+}
+
+.content .import h3.chobby {
+	/*进口葡萄酒标题*/
+	width: 1200px;
+	height: 30px;
+	display: inline-block;
+	line-height: 30px;
+	padding: 0 0 0 5px;
+	color: #333333;
+	font-size: 24px;
+	margin-bottom: 6px;
+	border-left: 6px solid #d3161b;
+	float: left;
+}
+
+.content .import h3 ul.importnav {
+	/*进口葡萄酒标题导航*/
+	width: auto;
+	height: 30px;
+	float: right;
+	font-size: 12px;
+	overflow: hidden;
+}
+
+.content .import h3 ul.importnav a {
+	/*进口葡萄酒标题导航里面的a */
+	padding: 0 20px;
+	border-right: 1px solid #767270;
+	color: #767270;
+}
+
+.content .import h3 ul.importnav a.no_r {
+	/*进口葡萄酒标题导航里面的a无边 */
+	border-right: none;
+}
+
+.content .import .imt_left {
+	/*左边*/
+	width: 200px;
+	height: 250px;
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	border-top: 2px solid #d3161b;
+}
+
+.content .import .imt_left img {
+	/*左边*/
+	width: 99px;
+	height: 49px;
+	margin: 0;
+	padding: 0;
+	float: left;
+	border-bottom: 1px #999999 solid;
+}
+
+.content .import .imt_left img.border {
+	/*左边*/
+	border-right: 1px #999999 solid;
+}
+
+.content .import .imt_mid {
+	/*中间*/
+	width: 750px;
+	height: 250px;
+	float: left;
+	margin: 0;
+	padding: 0;
+	border-top: 2px solid #d3161b;
+}
+
+.content .import .imt_mid img {
+	/*中间图片*/
+	width: 760px;
+	height: 250px;
+}
+
+.content .import .imt_right {
+	/*右边*/
+	width: 235px;
+	height: 250px;
+	margin-left: 3px;
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	border-top: 2px solid #d3161b;
+}
+
+.content .import .imt_right img {
+	/*右边*/
+	width: 235px;
+	height: 123px;
+	margin: 0;
+	padding: 0;
+}
+
+
+/*******************5.1性价比*******************/
+
+.content .cost {
+	width: 1200px;
+	height: 725px;
+	overflow: hidden;
+}
+
+.content .cost .costleft {
+	/*左边*/
+	width: 952px;
+	height: 725px;
+	float: left;
+}
+
+.content .cost .constright {
+	/*右边*/
+	width: 237px;
+	height: 725px;
+	float: right;
+}
+
+.content .cost .costleft1 {
+	/*左边1*/
+	width: 952px;
+	height: 362.5px;
+}
+
+.content .cost .costleft2 {
+	/*左边2*/
+	width: 952px;
+	height: 362.5px;
+}
+
+.content .cost .costleft1 h3 {
+	/*性价比标题*/
+	width: 100%;
+	height: 20px;
+	line-height: 10px;
+	border-bottom: 1px solid #c8c8c7;
+}
+
+
+/***左上***/
+
+.content .cost .costleft1 ul.costchose1 {
+	/*性价比下面的ul*/
+	width: 100%;
+	height: 100%;
+}
+
+.content .cost .costleft1 ul.costchose1 li {
+	/*性价比下面的li*/
+	margin: 0;
+	padding: 0;
+	width: 180px;
+	height: 290px;
+	float: left;
+	border: 2px solid white;
+	margin-left: 5px;
+}
+
+.content .cost .costleft1 ul.costchose1 li:hover {
+	/*性价比下面的li*/
+	border: 2px solid gainsboro;
+	box-shadow: 0px 5px 4px 0;
+}
+
+.content .cost .costleft1 ul.costchose1 li a img {
+	/*图片*/
+	margin-left: 18%;
+	margin-top: 8%;
+}
+
+.content .cost .costleft1 ul.costchose1 li p a {
+	/*li标题*/
+	display: block;
+	color: #413f3e;
+	height: 30px;
+	background: #eaeae7;
+	padding-bottom: 10px;
+	padding-top: 8px;
+}
+
+.content .cost .costleft1 ul.costchose1 li b {
+	/*li价格*/
+	display: block;
+	color: #b7262b;
+	font-size: 16px;
+	font-family: "arial";
+	background: #eaeae7;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #c1c1bb;
+}
+
+.content .cost .costleft1 ul.costchose1 li span {
+	/*li价格*/
+	display: inline-block;
+	float: left;
+	background: #eaeae7;
+	letter-spacing: 1px;
+	width: 90px;
+	text-align: center;
+}
+
+.content .cost .costleft1 ul.costchose1 li span.spanr {
+	/*li价格*/
+	float: right;
+}
+
+
+/***左下***/
+
+.content .cost .costleft2 h3 {
+	/*新品上市标题*/
+	width: 100%;
+	height: 20px;
+	line-height: 10px;
+	border-bottom: 1px solid #c8c8c7;
+}
+
+.content .cost .costleft2 ul.costchose2 {
+	/*性价比下面的ul*/
+	width: 100%;
+	height: 100%;
+}
+
+.content .cost .costleft2 ul.costchose2 li {
+	/*性价比下面的li*/
+	width: 180px;
+	height: 290px;
+	float: left;
+	border: 2px solid white;
+	margin-left: 5px;
+}
+
+.content .cost .costleft2 ul.costchose2 li:hover {
+	/*性价比下面的li*/
+	border: 2px solid gainsboro;
+	box-shadow: 0px 5px 4px 0;
+}
+
+.content .cost .costleft2 ul.costchose2 li a img {
+	/*图片*/
+	margin-left: 18%;
+	margin-top: 8%;
+}
+
+.content .cost .costleft2 ul.costchose2 li p a {
+	/*li标题*/
+	display: block;
+	color: #413f3e;
+	height: 30px;
+	background: #eaeae7;
+	padding-bottom: 10px;
+	padding-top: 8px;
+}
+
+.content .cost .costleft2 ul.costchose2 li b {
+	/*li价格*/
+	display: block;
+	color: #b7262b;
+	font-size: 16px;
+	font-family: "arial";
+	background: #eaeae7;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #c1c1bb;
+}
+
+.content .cost .costleft2 ul.costchose2 li span {
+	/*li价格*/
+	display: inline-block;
+	float: left;
+	background: #eaeae7;
+	letter-spacing: 1px;
+	width: 90px;
+	text-align: center;
+}
+
+.content .cost .costleft2 ul.costchose2 li span.spanr {
+	/*li价格*/
+	float: right;
+}
+
+
+/***右边排行***/
+
+.content .cost .constright {
+	/*右边大盒子*/
+	background: #f2f2f0;
+	margin-top: 10px;
+}
+
+.content .cost .constright ul h3 {
+	/*标题 */
+	margin: 0;
+	padding: 0;
+	margin-left: 6px;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid rgb(232, 227, 221);
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.content .cost .constright ul h3 img {
+	width: 20px;
+	height: 18px;
+	margin-right: 2px;
+}
+
+.content .cost .constright ul li {
+	/*点击以后出现的内容*/
+	width: 241px;
+	height: 133px;
+	position: relative;
+	margin-bottom: 3px;
+	border-bottom: 1px solid rgb(232, 227, 221);
+}
+
+.content .cost .constright ul li img {
+	/*小图标*/
+	width: 20px;
+	height: 18px;
+	margin-left: 6px;
+	margin-right: 2px;
+	position: absolute;
+	top: 10px;
+	left: 2px;
+}
+
+.content .cost .constright ul li b>img {
+	/*酒图片*/
+	width: 80px;
+	height: 110px;
+	position: absolute;
+	top: 20px;
+	left: 30px;
+}
+
+.content .cost .constright ul li p {
+	/*标题文本*/
+	width: 120px;
+	height: 42px;
+	margin-left: 120px;
+	position: absolute;
+	left: auto;
+	top: 20px;
+}
+
+.content .cost .constright ul li strong {
+	/*价钱*/
+	color: #c53f4c;
+	position: absolute;
+	top: 80px;
+	left: 123px;
+	font-size: 20px;
+}
+
+.content .cost .constright ul li i {
+	/*售出*/
+	font-style: normal;
+	/*字体正常*/
+	position: absolute;
+	top: 100px;
+	left: 123px;
+	font-size: 12px;
+}
+
+
+/************6.洋酒烈酒**********/
+
+.content .wine {
+	/*大盒子*/
+	width: 1200px;
+	height: 630px;
+	overflow: hidden;
+}
+
+.content .wineleft {
+	/*洋酒左边*/
+	float: left;
+	width: 960px;
+	height: 100%;
+}
+
+.content .wineright {
+	/*洋酒右边*/
+	float: left;
+	width: 240px;
+	height: 100%;
+}
+
+.content .wine h3.chobby {
+	/*洋酒烈酒标题*/
+	width: 1200px;
+	height: 30px;
+	display: inline-block;
+	line-height: 30px;
+	padding: 0 0 0 5px;
+	color: #333333;
+	font-size: 24px;
+	margin-bottom: 6px;
+	border-left: 6px solid #d3161b;
+	float: left;
+}
+
+.content .wine h3 ul.importnav {
+	/*洋酒烈酒标题导航*/
+	width: auto;
+	height: 30px;
+	float: right;
+	font-size: 12px;
+	overflow: hidden;
+}
+
+.content .wine h3 ul.importnav a {
+	/*洋酒烈酒标题导航里面的a */
+	padding: 0 20px;
+	border-right: 1px solid #767270;
+	color: #767270;
+}
+
+.content .wine h3 ul.importnav a.no_r {
+	/*洋酒烈酒标题导航里面的a无边 */
+	border-right: none;
+}
+
+
+/***左上****/
+
+.content .wine .imt_left {
+	/*左边*/
+	width: 200px;
+	height: 250px;
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	border-top: 2px solid #d3161b;
+	margin-bottom: 20px;
+}
+
+.content .wine .imt_left img {
+	/*左边*/
+	width: 99px;
+	height: 49px;
+	margin: 0;
+	padding: 0;
+	float: left;
+	border-bottom: 1px #999999 solid;
+}
+
+.content .wine .imt_left img.border {
+	/*左边*/
+	border-right: 1px #999999 solid;
+}
+
+.content .wine .imt_mid {
+	/*中间*/
+	width: 750px;
+	height: 250px;
+	float: left;
+	margin: 0;
+	padding: 0;
+	border-top: 2px solid #d3161b;
+	margin-bottom: 20px;
+}
+
+.content .wine .imt_mid img {
+	/*中间图片*/
+	width: 760px;
+	height: 250px;
+}
+
+
+/*洋酒左边下面的ul*/
+
+
+/***左下***/
+
+.content .wineleft .wineleft1 {
+	margin-top: 20px;
+}
+
+.content .wineleft .wineleft1 ul.costchose2 {
+	/*性价比下面的ul*/
+	width: 100%;
+	height: 100%;
+}
+
+.content .wineleft .wineleft1 ul.costchose2 li {
+	/*性价比下面的li*/
+	width: 180px;
+	height: 290px;
+	float: left;
+	border: 1px solid white;
+	margin-left: 6px;
+}
+
+.content .wineleft .wineleft1 ul.costchose2 li:hover {
+	/*性价比下面的li*/
+	/*border: 1px solid darkred;*/
+	box-shadow: 0px 2px 5px 1px;
+}
+
+.content .wineleft .wineleft1 ul.costchose2 li a img {
+	/*图片*/
+	margin-left: 18%;
+	margin-top: 8%;
+}
+
+.content .wineleft .wineleft1 ul.costchose2 li p a {
+	/*li标题*/
+	display: block;
+	color: #413f3e;
+	height: 30px;
+	background: #eaeae7;
+	padding-bottom: 10px;
+	padding-top: 8px;
+}
+
+.content .wineleft .wineleft1 ul.costchose2 li b {
+	/*li价格*/
+	display: block;
+	color: #b7262b;
+	font-size: 16px;
+	font-family: "arial";
+	background: #eaeae7;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #c1c1bb;
+}
+
+.content .wineleft .wineleft1 ul.costchose2 li span {
+	/*li价格*/
+	display: inline-block;
+	float: left;
+	background: #eaeae7;
+	letter-spacing: 1px;
+	width: 90px;
+	text-align: center;
+}
+
+.content .wineleft .wineleft1 ul.costchose2 li span.spanr {
+	/*li价格*/
+	float: right;
+}
+
+
+/*****洋酒右边*****/
+
+.content .wine .wineright {
+	/*右边大盒子*/
+	background: #f2f2f0;
+	margin-top: 30px;
+}
+
+.content .wine .wineright ul h3 {
+	/*标题 */
+	margin: 0;
+	padding: 0;
+	margin-left: 6px;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid rgb(232, 227, 221);
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.content .wine .wineright ul h3 img {
+	width: 20px;
+	height: 18px;
+	margin-right: 2px;
+}
+
+.content .wine .wineright ul li {
+	/*点击以后出现的内容*/
+	width: 241px;
+	height: 140px;
+	position: relative;
+	margin-bottom: 3px;
+	border-bottom: 1px solid rgb(232, 227, 221);
+}
+
+.content .wine .wineright ul li img {
+	/*小图标*/
+	width: 20px;
+	height: 18px;
+	margin-left: 6px;
+	margin-right: 2px;
+	position: absolute;
+	top: 10px;
+	left: 2px;
+}
+
+.content .wine .wineright ul li b>img {
+	/*酒图片*/
+	width: 80px;
+	height: 110px;
+	position: absolute;
+	top: 20px;
+	left: 30px;
+}
+
+.content .wine .wineright ul li p {
+	/*标题文本*/
+	width: 120px;
+	height: 42px;
+	margin-left: 120px;
+	position: absolute;
+	left: auto;
+	top: 20px;
+}
+
+.content .wine .wineright ul li strong {
+	/*价钱*/
+	color: #c53f4c;
+	position: absolute;
+	top: 80px;
+	left: 123px;
+	font-size: 20px;
+}
+
+.content .wine .wineright ul li i {
+	/*售出*/
+	font-style: normal;
+	/*字体正常*/
+	position: absolute;
+	top: 100px;
+	left: 123px;
+	font-size: 12px;
+}
+
+#wineset {
+	border: 1px solid #d2d2ce;
+}
+
+
+/*洋酒下面的图片*/
+
+.content .foreign {
+	width: 1200px;
+	height: 150px;
+	margin-top: 20px;
+	border-top: 1px solid #d2d2ce;
+	padding-top: 10px;
+}
+
+
+/**********7.中国白酒**********/
+
+.content .whitewine {
+	width: 1200px;
+	height: 320px;
+	position: relative;
+	overflow: hidden;
+}
+
+.content .whitewine h3.chobby {
+	/*中国白酒标题*/
+	width: 1200px;
+	height: 30px;
+	display: inline-block;
+	line-height: 30px;
+	padding: 0 0 0 5px;
+	color: #333333;
+	font-size: 24px;
+	margin-bottom: 6px;
+	border-left: 6px solid #d3161b;
+	float: left;
+}
+
+.content .whitewine h3 ul.importnav {
+	/*中国白酒标题导航*/
+	width: auto;
+	height: 30px;
+	float: right;
+	font-size: 12px;
+	overflow: hidden;
+}
+
+.content .whitewine h3 ul.importnav a {
+	/*中国白酒标题导航里面的a */
+	padding: 0 20px;
+	border-right: 1px solid #767270;
+	color: #767270;
+}
+
+.content .whitewine h3 ul.importnav a.no_r {
+	/*中国白酒标题导航里面的a无边 */
+	border-right: none;
+}
+
+.content .whitewine .imt_left {
+	/*左边*/
+	width: 200px;
+	height: 250px;
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	border-top: 2px solid #d3161b;
+}
+
+.content .whitewine .imt_left img {
+	/*左边*/
+	width: 99px;
+	height: 49px;
+	margin: 0;
+	padding: 0;
+	float: left;
+	border-bottom: 1px #999999 solid;
+}
+
+.content .whitewine .imt_left img.border {
+	/*左边*/
+	border-right: 1px #999999 solid;
+}
+
+.content .whitewine .imt_mid {
+	/*中间*/
+	width: 750px;
+	height: 250px;
+	float: left;
+	margin: 0;
+	padding: 0;
+	border-top: 2px solid #d3161b;
+}
+
+.content .whitewine .imt_mid img {
+	/*中间图片*/
+	width: 760px;
+	height: 250px;
+}
+
+.content .whitewine .imt_right {
+	/*右边*/
+	width: 235px;
+	height: 250px;
+	margin-left: 3px;
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	border-top: 2px solid #d3161b;
+}
+
+.content .whitewine .imt_right img {
+	/*右边*/
+	width: 235px;
+	height: 123px;
+	margin: 0;
+	padding: 0;
+}
+
+
+/*******************5.爆款精选*******************/
+
+.content .cost2 {
+	width: 1200px;
+	height: 725px;
+	overflow: hidden;
+}
+
+.content .cost2 .costleft {
+	/*左边*/
+	width: 952px;
+	height: 725px;
+	float: left;
+}
+
+.content .cost2 .constright {
+	/*右边*/
+	width: 237px;
+	height: 725px;
+	float: right;
+}
+
+.content .cost2 .costleft1 {
+	/*左边1*/
+	width: 952px;
+	height: 362.5px;
+}
+
+.content .cost2 .costleft2 {
+	/*左边2*/
+	width: 952px;
+	height: 362.5px;
+}
+
+.content .cost2 .costleft1 h3 {
+	/*爆款精选*/
+	width: 100%;
+	height: 20px;
+	line-height: 10px;
+	border-bottom: 1px solid #c8c8c7;
+}
+
+
+/***左上***/
+
+.content .cost2 .costleft1 ul.costchose1 {
+	/*性价比下面的ul*/
+	width: 100%;
+	height: 100%;
+}
+
+.content .cost2 .costleft1 ul.costchose1 li {
+	/*性价比下面的li*/
+	margin: 0;
+	padding: 0;
+	width: 180px;
+	height: 290px;
+	float: left;
+	border: 2px solid white;
+	margin-left: 5px;
+}
+
+.content .cost2 .costleft1 ul.costchose1 li:hover {
+	/*性价比下面的li*/
+	border: 2px solid gainsboro;
+	box-shadow: 0px 5px 4px 0;
+	/*阴影*/
+}
+
+.content .cost2 .costleft1 ul.costchose1 li a img {
+	/*图片*/
+	margin-left: 18%;
+	margin-top: 8%;
+}
+
+.content .cost2 .costleft1 ul.costchose1 li p a {
+	/*li标题*/
+	display: block;
+	color: #413f3e;
+	height: 30px;
+	background: #eaeae7;
+	padding-bottom: 10px;
+	padding-top: 8px;
+}
+
+.content .cost2 .costleft1 ul.costchose1 li b {
+	/*li价格*/
+	display: block;
+	color: #b7262b;
+	font-size: 16px;
+	font-family: "arial";
+	background: #eaeae7;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #c1c1bb;
+}
+
+.content .cost2 .costleft1 ul.costchose1 li span {
+	/*li价格*/
+	display: inline-block;
+	float: left;
+	background: #eaeae7;
+	letter-spacing: 1px;
+	width: 90px;
+	text-align: center;
+}
+
+.content .cost2 .costleft1 ul.costchose1 li span.spanr {
+	/*li价格*/
+	float: right;
+}
+
+
+/***左下***/
+
+.content .cost2 .costleft2 h3 {
+	/*新品上市标题*/
+	width: 100%;
+	height: 20px;
+	line-height: 10px;
+	border-bottom: 1px solid #c8c8c7;
+}
+
+.content .cost2 .costleft2 ul.costchose2 {
+	/*性价比下面的ul*/
+	width: 100%;
+	height: 100%;
+}
+
+.content .cost2 .costleft2 ul.costchose2 li {
+	/*性价比下面的li*/
+	width: 180px;
+	height: 290px;
+	float: left;
+	border: 2px solid white;
+	margin-left: 5px;
+}
+
+.content .cost2 .costleft2 ul.costchose2 li:hover {
+	/*性价比下面的li*/
+	border: 2px solid gainsboro;
+	box-shadow: 0px 5px 4px 0;
+}
+
+.content .cost2 .costleft2 ul.costchose2 li a img {
+	/*图片*/
+	margin-left: 18%;
+	margin-top: 8%;
+}
+
+.content .cost2 .costleft2 ul.costchose2 li p a {
+	/*li标题*/
+	display: block;
+	color: #413f3e;
+	height: 30px;
+	background: #eaeae7;
+	padding-bottom: 10px;
+	padding-top: 8px;
+}
+
+.content .cost2 .costleft2 ul.costchose2 li b {
+	/*li价格*/
+	display: block;
+	color: #b7262b;
+	font-size: 16px;
+	font-family: "arial";
+	background: #eaeae7;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #c1c1bb;
+}
+
+.content .cost2 .costleft2 ul.costchose2 li span {
+	/*li价格*/
+	display: inline-block;
+	float: left;
+	background: #eaeae7;
+	letter-spacing: 1px;
+	width: 90px;
+	text-align: center;
+}
+
+.content .cost2 .costleft2 ul.costchose2 li span.spanr {
+	/*li价格*/
+	float: right;
+}
+
+
+/***右边排行***/
+
+.content .cost2 .constright {
+	/*右边大盒子*/
+	background: #f2f2f0;
+	margin-top: 10px;
+}
+
+.content .cost2 .constright ul h3 {
+	/*标题 */
+	margin: 0;
+	padding: 0;
+	margin-left: 6px;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid rgb(232, 227, 221);
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.content .cost2 .constright ul h3 img {
+	width: 20px;
+	height: 18px;
+	margin-right: 2px;
+}
+
+.content .cost2 .constright ul li {
+	/*点击以后出现的内容*/
+	width: 241px;
+	height: 133px;
+	position: relative;
+	margin-bottom: 3px;
+	border-bottom: 1px solid rgb(232, 227, 221);
+}
+
+.content .cost2 .constright ul li img {
+	/*小图标*/
+	width: 20px;
+	height: 18px;
+	margin-left: 6px;
+	margin-right: 2px;
+	position: absolute;
+	top: 10px;
+	left: 2px;
+}
+
+.content .cost2 .constright ul li b>img {
+	/*酒图片*/
+	width: 80px;
+	height: 110px;
+	position: absolute;
+	top: 20px;
+	left: 30px;
+}
+
+.content .cost2 .constright ul li p {
+	/*标题文本*/
+	width: 120px;
+	height: 42px;
+	margin-left: 120px;
+	position: absolute;
+	left: auto;
+	top: 20px;
+}
+
+.content .cost2 .constright ul li strong {
+	/*价钱*/
+	color: #c53f4c;
+	position: absolute;
+	top: 80px;
+	left: 123px;
+	font-size: 20px;
+}
+
+.content .cost2 .constright ul li i {
+	/*售出*/
+	font-style: normal;
+	/*字体正常*/
+	position: absolute;
+	top: 100px;
+	left: 123px;
+	font-size: 12px;
+}
+
+
+/**********陈年老酒***********/
+
+.content .oldwine {
+	width: 1200px;
+	height: 320px;
+	position: relative;
+	overflow: hidden;
+}
+
+.content .oldwine h3.chobby {
+	/*中国白酒标题*/
+	width: 1200px;
+	height: 30px;
+	display: inline-block;
+	line-height: 30px;
+	padding: 0 0 0 5px;
+	color: #333333;
+	font-size: 24px;
+	margin-bottom: 6px;
+	border-left: 6px solid #d3161b;
+	float: left;
+}
+
+.content .oldwine h3 ul.importnav {
+	/*中国白酒标题导航*/
+	width: auto;
+	height: 30px;
+	float: right;
+	font-size: 12px;
+	overflow: hidden;
+}
+
+.content .oldwine h3 ul.importnav a {
+	/*中国白酒标题导航里面的a */
+	padding: 0 20px;
+	border-right: 1px solid #767270;
+	color: #767270;
+}
+
+.content .oldwine h3 ul.importnav a.no_r {
+	/*中国白酒标题导航里面的a无边 */
+	border-right: none;
+}
+
+.content .oldwine .imt_left {
+	/*左边*/
+	width: 200px;
+	height: 250px;
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	border-top: 2px solid #d3161b;
+}
+
+.content .oldwine .imt_left img {
+	/*左边*/
+	width: 99px;
+	height: 49px;
+	margin: 0;
+	padding: 0;
+	float: left;
+	border-bottom: 1px #999999 solid;
+}
+
+.content .oldwine .imt_left img.border {
+	/*左边*/
+	border-right: 1px #999999 solid;
+}
+
+.content .oldwine .imt_mid {
+	/*中间*/
+	width: 750px;
+	height: 250px;
+	float: left;
+	margin: 0;
+	padding: 0;
+	border-top: 2px solid #d3161b;
+}
+
+.content .oldwine .imt_mid img {
+	/*中间图片*/
+	width: 760px;
+	height: 250px;
+}
+
+.content .oldwine .imt_right {
+	/*右边*/
+	width: 235px;
+	height: 250px;
+	margin-left: 3px;
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	border-top: 2px solid #d3161b;
+}
+
+.content .oldwine .imt_right img {
+	/*右边*/
+	width: 235px;
+	height: 123px;
+	margin: 0;
+	padding: 0;
+}
+
+
+/*****性价比高老酒*****/
+
+
+/*******************5.爆款精选*******************/
+
+.content .cost3 {
+	width: 1200px;
+	height: 725px;
+	overflow: hidden;
+}
+
+.content .cost3 .costleft {
+	/*左边*/
+	width: 952px;
+	height: 725px;
+	float: left;
+}
+
+.content .cost3 .constright {
+	/*右边*/
+	width: 237px;
+	height: 725px;
+	float: right;
+}
+
+.content .cost3 .costleft1 {
+	/*左边1*/
+	width: 952px;
+	height: 362.5px;
+}
+
+.content .cost3 .costleft2 {
+	/*左边2*/
+	width: 952px;
+	height: 362.5px;
+}
+
+.content .cost3 .costleft1 h3 {
+	/*爆款精选*/
+	width: 100%;
+	height: 20px;
+	line-height: 10px;
+	border-bottom: 1px solid #c8c8c7;
+}
+
+
+/***左上***/
+
+.content .cost3 .costleft1 ul.costchose1 {
+	/*性价比下面的ul*/
+	width: 100%;
+	height: 100%;
+}
+
+.content .cost3 .costleft1 ul.costchose1 li {
+	/*性价比下面的li*/
+	margin: 0;
+	padding: 0;
+	width: 180px;
+	height: 290px;
+	float: left;
+	border: 2px solid white;
+	margin-left: 5px;
+}
+
+.content .cost3 .costleft1 ul.costchose1 li:hover {
+	/*性价比下面的li*/
+	border: 2px solid gainsboro;
+	box-shadow: 0px 5px 4px 0;
+}
+
+.content .cost3 .costleft1 ul.costchose1 li a img {
+	/*图片*/
+	margin-left: 18%;
+	margin-top: 8%;
+}
+
+.content .cost3 .costleft1 ul.costchose1 li p a {
+	/*li标题*/
+	display: block;
+	color: #413f3e;
+	height: 30px;
+	background: #eaeae7;
+	padding-bottom: 10px;
+	padding-top: 8px;
+}
+
+.content .cost3 .costleft1 ul.costchose1 li b {
+	/*li价格*/
+	display: block;
+	color: #b7262b;
+	font-size: 16px;
+	font-family: "arial";
+	background: #eaeae7;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #c1c1bb;
+}
+
+.content .cost3 .costleft1 ul.costchose1 li span {
+	/*li价格*/
+	display: inline-block;
+	float: left;
+	background: #eaeae7;
+	letter-spacing: 1px;
+	width: 90px;
+	text-align: center;
+}
+
+.content .cost3 .costleft1 ul.costchose1 li span.spanr {
+	/*li价格*/
+	float: right;
+}
+
+
+/***左下***/
+
+.content .cost3 .costleft2 h3 {
+	/*新品上市标题*/
+	width: 100%;
+	height: 20px;
+	line-height: 10px;
+	border-bottom: 1px solid #c8c8c7;
+}
+
+.content .cost3 .costleft2 ul.costchose2 {
+	/*性价比下面的ul*/
+	width: 100%;
+	height: 100%;
+}
+
+.content .cost3 .costleft2 ul.costchose2 li {
+	/*性价比下面的li*/
+	width: 180px;
+	height: 290px;
+	float: left;
+	border: 2px solid white;
+	margin-left: 5px;
+}
+
+.content .cost3 .costleft2 ul.costchose2 li:hover {
+	/*性价比下面的li*/
+	border: 2px solid gainsboro;
+	box-shadow: 0px 5px 4px 0;
+}
+
+.content .cost3 .costleft2 ul.costchose2 li a img {
+	/*图片*/
+	margin-left: 18%;
+	margin-top: 8%;
+}
+
+.content .cost3 .costleft2 ul.costchose2 li p a {
+	/*li标题*/
+	display: block;
+	color: #413f3e;
+	height: 30px;
+	background: #eaeae7;
+	padding-bottom: 10px;
+	padding-top: 8px;
+}
+
+.content .cost3 .costleft2 ul.costchose2 li b {
+	/*li价格*/
+	display: block;
+	color: #b7262b;
+	font-size: 16px;
+	font-family: "arial";
+	background: #eaeae7;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #c1c1bb;
+}
+
+.content .cost3 .costleft2 ul.costchose2 li span {
+	/*li价格*/
+	display: inline-block;
+	float: left;
+	background: #eaeae7;
+	letter-spacing: 1px;
+	width: 90px;
+	text-align: center;
+}
+
+.content .cost3 .costleft2 ul.costchose2 li span.spanr {
+	/*li价格*/
+	float: right;
+}
+
+
+/***右边排行***/
+
+.content .cost3 .constright {
+	/*右边大盒子*/
+	background: #f2f2f0;
+	margin-top: 10px;
+}
+
+.content .cost3 .constright ul h3 {
+	/*标题 */
+	margin: 0;
+	padding: 0;
+	margin-left: 6px;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid rgb(232, 227, 221);
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.content .cost3 .constright ul h3 img {
+	width: 20px;
+	height: 18px;
+	margin-right: 2px;
+}
+
+.content .cost3 .constright ul li {
+	/*点击以后出现的内容*/
+	width: 241px;
+	height: 133px;
+	position: relative;
+	margin-bottom: 3px;
+	border-bottom: 1px solid rgb(232, 227, 221);
+}
+
+.content .cost3 .constright ul li img {
+	/*小图标*/
+	width: 20px;
+	height: 18px;
+	margin-left: 6px;
+	margin-right: 2px;
+	position: absolute;
+	top: 10px;
+	left: 2px;
+}
+
+.content .cost3 .constright ul li b>img {
+	/*酒图片*/
+	width: 80px;
+	height: 110px;
+	position: absolute;
+	top: 20px;
+	left: 30px;
+}
+
+.content .cost3 .constright ul li p {
+	/*标题文本*/
+	width: 120px;
+	height: 42px;
+	margin-left: 120px;
+	position: absolute;
+	left: auto;
+	top: 20px;
+}
+
+.content .cost3 .constright ul li strong {
+	/*价钱*/
+	color: #c53f4c;
+	position: absolute;
+	top: 80px;
+	left: 123px;
+	font-size: 20px;
+}
+
+.content .cost3 .constright ul li i {
+	/*售出*/
+	font-style: normal;
+	/*字体正常*/
+	position: absolute;
+	top: 100px;
+	left: 123px;
+	font-size: 12px;
+}

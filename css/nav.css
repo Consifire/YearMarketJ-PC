@@ -1,0 +1,335 @@
+/*********************导航条及下拉菜单的css样式nav.html*********************/
+
+.nav {
+	/*导航条*/
+	width: 1280px;
+	height: 35px;
+	background: rgb(211, 22, 27);
+	/*背景色*/
+	font-size: 14px;
+	position: relative;
+	/*相对定位*/
+	margin: 0 auto;
+}
+
+.nav ul.nav_ul li.li1 {
+	float: left;
+	padding: 0 18px;
+}
+
+.nav ul.nav_ul .leftli {
+	margin-left: 281px;
+}
+
+.nav ul.nav_ul li.li1:hover {
+	background: rgb(188, 0, 1);
+}
+
+.nav ul.nav_ul li a:hover {
+	text-decoration: none;
+}
+
+.nav ul.nav_ul li.li1 a {
+	/* li列表下面*/
+	color: white;
+	/*覆盖之前的字体颜色*/
+	line-height: 35px;
+	border-right: 1px solid rbg(177, 30, 25);
+}
+
+
+/***********************导航条的下拉框***********************/
+
+.nav ul.nav_ul #choosemid {
+	/*对选酒中心设置*/
+	display: inline-block;
+	/* 装成行内块元素*/
+	float: left;
+	/*浮动才能在列表的左边*/
+	width: 200px;
+	height: 535px;
+	position: absolute;
+	left: 80px;
+	top: 0;
+	background: white;
+}
+
+.nav ul.nav_ul #choosemid ins {
+	/*选酒中心设置*/
+	display: block;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	text-decoration: none;
+	color: white;
+	width: 190px;
+	height: 35px;
+	line-height: 35px;
+	padding-left: 10px;
+	cursor: pointer;
+	background: #a11011;
+}
+
+.nav ul.nav_ul #choosemid .nav_list {
+	/*下拉框*/
+	width: 200px;
+	height: 500px;
+}
+
+.nav ul.nav_ul #choosemid .nav_list .nav_list_ul li {
+	padding: 10px;
+	/*给每一个li设置padding*/
+}
+
+.nav ul.nav_ul #choosemid .nav_list .nav_list_ul dl {
+	/*每个li的标题dl设置内容*/
+	font-weight: 900;
+	font-size: 14px;
+	color: rgb(145, 144, 148);
+}
+
+.nav ul.nav_ul #choosemid .nav_list .nav_list_ul dt.dt_1 a {
+	/*每个li里面的内容*/
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.nav ul.nav_ul #choosemid .nav_list .nav_list_ul li {
+	/*每一个li都加一个底边框*/
+	border-bottom: 1px solid rgb(145, 144, 148);
+}
+
+.nav ul.nav_ul #choosemid .bg_red {
+	/*高亮显示*/
+	background: #A11011;
+	color: white;
+	border-radius: 4px;
+	padding: 0 4px;
+}
+
+.nav ul.nav_ul #choosemid .bg_grey {
+	background: #392d26;
+	color: white;
+	border-radius: 4px;
+	padding: 0 4px;
+}
+
+
+/***********************导航条的下拉框的二级菜单***********************/
+
+
+/*第1个二级菜单*/
+
+.nav ul.nav_ul #choosemid .nav_list_2 {
+	/*二级菜单*/
+	position: absolute;
+	/*定位*/
+	top: 35px;
+	left: 200px;
+	width: 280px;
+	height: 220px;
+	background: white;
+	box-shadow: 2px 2px 5px #5C483D;
+	overflow: hidden;
+}
+
+.nav_list_list11 {
+	overflow: hidden;
+	height: 220px;
+	width: 280px;
+}
+
+.nav ul.nav_ul #choosemid .nav_list_2 .nav_list_list11 li {
+	border-bottom: dotted 1px #000000;
+	/*每个li加底边框*/
+	padding-top: 10px;
+	padding-left: 10px;
+	width: 280px;
+	height: 40px;
+}
+
+.nav ul.nav_ul #choosemid .nav_list_2 ul.nav_list_list11 li p {
+	/*汇总标题*/
+	display: block;
+	width: 80px;
+	height: 40px;
+	float: left;
+}
+
+.nav ul.nav_ul #choosemid .nav_list_2 ul.nav_list_list11 li b {
+	/*下面子列表*/
+	display: block;
+	float: left;
+	width: 150px;
+	height: 40px;
+	margin-right: 20px;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.nav ul.nav_ul #choosemid .nav_list_2 ul.nav_list_list11 li b>a {
+	/*设置列表间距*/
+	margin-right: 10px;
+}
+
+
+/*第2个二级菜单*/
+
+.nav ul.nav_ul #choosemid .nav_list_22 {
+	/*二级菜单*/
+	position: absolute;
+	/*定位*/
+	top: 132px;
+	left: 200px;
+	width: 280px;
+	height: 220px;
+	background: white;
+	box-shadow: 2px 2px 5px #5C483D;
+	overflow: hidden;
+}
+
+.nav_list_list {
+	overflow: hidden;
+	height: 220px;
+	width: 280px;
+}
+
+.nav ul.nav_ul #choosemid .nav_list_22 .nav_list_list22 li {
+	border-bottom: dotted 1px #000000;
+	/*每个li加底边框*/
+	padding-top: 10px;
+	padding-left: 10px;
+	width: 280px;
+	height: 40px;
+}
+
+.nav ul.nav_ul #choosemid .nav_list_22 ul.nav_list_list22 li p {
+	/*汇总标题*/
+	display: block;
+	width: 80px;
+	height: 40px;
+	float: left;
+}
+
+.nav ul.nav_ul #choosemid .nav_list_22 ul.nav_list_list22 li b {
+	/*下面子列表*/
+	display: block;
+	float: left;
+	width: 150px;
+	height: 40px;
+	margin-right: 20px;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.nav ul.nav_ul #choosemid .nav_list_22 ul.nav_list_list22 li b>a {
+	/*设置列表间距*/
+	margin-right: 10px;
+}
+
+
+/*第3个二级菜单*/
+
+.nav ul.nav_ul #choosemid .nav_list_222 {
+	/*二级菜单*/
+	position: absolute;
+	/*定位*/
+	top: 249px;
+	left: 200px;
+	width: 280px;
+	height: 200px;
+	background: white;
+	box-shadow: 2px 2px 5px #5C483D;
+	overflow: hidden;
+}
+
+.nav_list_list {
+	overflow: hidden;
+	height: 200px;
+	width: 280px;
+}
+
+.nav ul.nav_ul #choosemid .nav_list_222 .nav_list_list33 li {
+	border-bottom: dotted 1px #000000;
+	/*每个li加底边框*/
+	padding-top: 10px;
+	padding-left: 10px;
+	width: 280px;
+	height: 40px;
+}
+
+.nav ul.nav_ul #choosemid .nav_list_222 ul.nav_list_list33 li p {
+	/*汇总标题*/
+	display: block;
+	width: 80px;
+	height: 40px;
+	float: left;
+}
+
+.nav ul.nav_ul #choosemid .nav_list_222 ul.nav_list_list33 li b {
+	/*下面子列表*/
+	display: block;
+	float: left;
+	width: 150px;
+	height: 40px;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.nav ul.nav_ul #choosemid .nav_list_222 ul.nav_list_list33 li b>a {
+	/*设置列表间距*/
+	margin-right: 10px;
+}
+
+
+/*第4个二级菜单*/
+
+.nav ul.nav_ul #choosemid .nav_list_2222 {
+	/*二级菜单*/
+	position: absolute;
+	/*定位*/
+	top: 347px;
+	left: 200px;
+	width: 280px;
+	height: 160px;
+	box-shadow: 2px 2px 5px #5C483D;
+	background: white;
+	overflow: hidden;
+}
+
+.nav_list_list {
+	overflow: hidden;
+	height: 200px;
+	width: 280px;
+}
+
+.nav ul.nav_ul #choosemid .nav_list_2222 .nav_list_list44 li {
+	border-bottom: dotted 1px #000000;
+	/*每个li加底边框*/
+	padding-top: 10px;
+	padding-left: 10px;
+	width: 280px;
+	height: 40px;
+}
+
+.nav ul.nav_ul #choosemid .nav_list_2222 ul.nav_list_list44 li p {
+	/*汇总标题*/
+	display: block;
+	width: 80px;
+	height: 40px;
+	float: left;
+}
+
+.nav ul.nav_ul #choosemid .nav_list_2222 ul.nav_list_list44 li b {
+	/*下面子列表*/
+	display: block;
+	float: left;
+	width: 190px;
+	height: 40px;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.nav ul.nav_ul #choosemid .nav_list_2222 ul.nav_list_list44 li b>a {
+	/*设置列表间距*/
+	margin-right: 10px;
+}

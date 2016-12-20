@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>也买酒商品详情页</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<!--重置样式-->
+		<link rel="stylesheet" type="text/css" href="../css/detail.css" />
+		<!--详情页样式-->
+		<link rel="stylesheet" type="text/css" href="../css/jquery.xzoom.css" />
+		<style type="text/css">
+
+		</style>
+		<script src="../assets/jquery-1.12.0.js" type="text/javascript" charset="utf-8"></script>
+		<!--jq文件-->
+		<script src="../js/detail.js" type="text/javascript" charset="utf-8"></script>
+		<!--详情页jq文件-->
+		<script src="../assets/jquery.xzoom.js" type="text/javascript" charset="utf-8"></script>
+		<!--放大镜-->
+		<script src="../js/cookie01.js" type="text/javascript" charset="utf-8"></script>
+		<!-- cookie封装函数-->
+
+		<script type="text/javascript">
+			onload = function() {
+
+				//获取元素节点
+				var odiv = document.getElementById("detailrightcon");
+				var oul = odiv.getElementsByTagName("ul")[0];
+				var oli = oul.getElementsByTagName("li")[1];
+				var op = oli.getElementsByTagName("p")[3];
+
+				var oaddgoods = document.getElementById("addgoods");
+
+				//点击按钮加减
+				var _jia = document.getElementById("jia"); //加按钮
+				var _jian = document.getElementById("jian"); //减按钮
+				var _value = document.getElementById("value"); //数量值
+
+				//定义一个一个变量
+				var data = 1;
+				_jia.onclick = function() { //加	按钮								
+					data++;
+					_value.innerHTML = data;
+					oaddgoods.innerHTML = data;
+					var d = new Date;
+					d.setDate(d.getDate() + 7);
+					var cookieText = setCookie("goodsnum", num, d);
+				};
+
+				_jian.onclick = function() { //减按钮
+					if(data <= 1) {
+						data = 1;
+					}
+					if(data > 1) {
+						data--;
+					}
+					_value.innerHTML = data; //数量赋值					
+				};
+				oaddgoods.innerHTML = data; //购物车赋值
+
+				op.onclick = function() { //点击加入购物车按钮
+
+					//检索找到需要的元素节点
+					var oh3 = this.parentNode.parentNode.parentNode.getElementsByTagName("h3")[0];
+					var name = oh3.innerHTML; //名称
+					var onum = this.parentNode.getElementsByTagName("p")[1];
+					var num = _value.innerHTML; //数量
+					var oli = this.parentNode.parentNode.parentNode.getElementsByTagName("li")[2];
+					var oprice = oli.getElementsByTagName("span")[1];
+					var price = oprice.innerText; //价格
+
+					var d = new Date;
+					d.setDate(d.getDate() + 7);
+					var cookieText = setCookie("goodsname", name, d); //存入name
+					var cookieText = setCookie("goodsnum", num, d); //存入num
+					var cookieText = setCookie("goodsprice", price, d); //存入price
+
+					//alert(getCookie('goodsname'));
+					//alert(getCookie('goodsnum'));
+					//alert(getCookie('goodsprice'));
+					//alert("添加购物车成功！");
+
+				}
+
+				//小图变大图
+				//改变下标索引
+				//使用封装的插件
+				var oimg = document.getElementById("Img"); //大图
+				var osrc1 = document.getElementById("src1"); //左1小图
+				var osrc2 = document.getElementById("src2"); //左二小图
+
+				osrc1.onclick = function() { //点击触发事件
+					oimg.src = this.src;
+					oimg.setAttribute("data-big", "../images/images/ga1.jpg");
+
+				};
+				osrc2.onclick = function() {
+					oimg.src = this.src;
+					oimg.setAttribute("data-big", "../images/images/ga2.jpg");
+				};
+			}
+		</script>
+	</head>
+
+	<body>
+
+		<div class="detailbox">
+
+			<!--头部-->
+			<div class="header">
+				<!--头部（最上头+ logo搜索框）-->
+				<div class="header_top">
+					<!--最上头-->
+					<!--<左边>-->
+					<span>
+						<span class="header_span">234567</span>位会员选择
+					<span class="header_denglu"><a href="login.html">登录&ensp;</a>|<a href="regist.html">注册</a></span>
+					</span>
+					<!--<右边>-->
+					<ul class="header_top_right">
+						<li>
+							<a href="#">会员俱乐部</a>
+						</li>
+						<li>
+							<a href="#">签到</a>
+						</li>
+						<li>
+							<a href="#">我的账户<img src="../css/img/sanjiao.jpg" /></a>
+						</li>
+						<li>
+							<a href="#" class="phone"><img src="../css/img/phonelogo.png" />手机版</a>
+						</li>
+						<li>
+							<a href="#">红酒交易中心</a>
+						</li>
+						<li>
+							<a href="#">也买服务</a>
+						</li>
+						<li>
+							<a href="#" class="no_border">设置勿扰</a>
+						</li>
+					</ul>
+
+				</div>
+
+				<!--logo搜索框-->
+				<div class="header_logo">
+					<!--左边的logo-->
+					<a href="index.html"><img src="../images/logo.jpg" /></a>
+
+					<!--右边的搜索框-->
+					<form class="goods_form">
+						<input type="text" name="goodsname" value="" placeholder="请输入你要查找的商品" />
+						<!--输入框-->
+						<p class="search">
+							<a href="list.html">搜索</a>
+						</p>
+						<p class="gcar">
+							<a href="gcar.html"><img width="20px" height="20px" src="../css/img/car.png" />购物车</a>
+						</p>
+						<span>
+							<a href="list.html">薄若莱2016新酒预订</a>
+							<a href="list.html">也买酒学院</a><a href="list.html">婚庆酒</a>
+							<a href="list.html">特色陈年老酒</a><a href="list.html">名庄酒</a>
+						</span>
+					</form>
+
+				</div>
+
+			</div>
+
+			<!--右侧固定条	 -->
+			<div class="fixedbox">
+				<li id="mycar">
+					<a href="gcar.html" id="car"><img src="../css/img/x4.jpg" /></a>
+				</li>
+				<li>
+					<div id="addgoods"></div>
+				</li>
+				<li>
+					<a href="#" class="fixedbox_top"><img src="../css/img/x3.gif" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="../css/img/x6.gif" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="../css/img/x7.gif" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="../css/img/x8.gif" /></a>
+				</li>
+			</div>
+
+			<!--导航条-->
+			<div class="nav">
+				<ul class="nav_ul">
+					<p>
+						<a href="#" class="choosemid"><img src="../css/img/listlogo.jpg" />选酒中心</a>
+					</p>
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="list.html">超值抢购</a>
+					</li>
+					<li>
+						<a href="list.html">精品奖购</a>
+					</li>
+					<li>
+						<a href="list.html">名庄特卖</a>
+					</li>
+					<li>
+						<a href="list.html">香港免税</a>
+					</li>
+					<li>
+						<a href="list.html">国酒馆</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="detailcont">
+				<!--详情页内容-->
+				<p>
+					<a href="#">选酒中心</a>>
+					<a href="list.html">红葡萄酒</a>>
+					<a href="list.html">半干红</a>>
+					<a href="list.html">黄尾袋鼠拉红葡萄酒（又名：黄尾袋鼠西拉字葡萄酒）</a>
+				</p>
+
+				<!--1.放大镜-->
+				<div class="detailleftcon">
+					<!--左边内容 ，放大镜-->
+					<div class="img" id="img">
+						<img id="Img" src="../images/images/ga1.jpg" data-big="../images/images/ga1.jpg" /></div>
+					<!--大图-->
+
+					<li><img id="src1" src="../images/images/ga1.jpg" data-big="../images/images/ga1.jpg" /> </li>
+					<!--两张缩略图-->
+					<li><img id="src2" src="../images/images/ga2.jpg" data-big="../images/images/ga2.jpg" /></li><br /><br /><br /><br />
+
+					<b class="goodsid">商品ID：37928</b>
+					<p class="clickp"><img src="../css/img/j_03.gif" /><span class="span1"><img src="../css/img/j_05.gif"/></span><span class="span2"><img src="../css/img/j_06.gif"/></span></p>
+				</div>
+
+				<!--1购物车-->
+				<div class="detailrightcon" id="detailrightcon">
+					<!--右边板块写文字介绍-->
+					<h3>黄尾袋鼠拉红葡萄酒</h3>
+					<p>Yellow Tall Shiraz</p>
+
+					<span class="margin">JH</span>
+					<span class="margin2">85</span>
+					<span class="margin">WS</span>
+					<span class="margin2">85</span>
+
+					<li class="sp">商品评分：
+						<img src="../css/img/xin.png" />
+						<!--五颗星-->
+						<img src="../css/img/xin.png" />
+						<img src="../css/img/xin.png" />
+						<img src="../css/img/xin.png" />
+						<img src="../css/img/xin2.jpg" />
+						<span>评论数：<b>10800</b></span>
+						<span class="chose">搭配菜肴： &ensp;近期售出数123667</span>
+					</li>
+
+					<li class="cx">
+						<!--促销信息-->
+						促销信息：<span class="bgred">商品折扣</span>&ensp;
+						<b>明星单品促销信息特惠</b>
+					</li>
+
+					<li class="price">
+						<span>￥</span><span class="bigsize">59.0</span>
+					</li>
+
+					<li class="zk">
+						<span class="font-w">促销折扣 <b>4.4</b>折</span>
+						<span class="color-g">节省<big>￥76.0</big></span>
+					</li>
+
+					<ul class="bgk">
+						<li class="ps">
+							<b>配送城市：</b>
+							<select>
+								<option>广东</option>
+								<option>福建</option>
+								<option>上海</option>
+							</select>
+							<span>广东</span>有货&ensp;广东分仓发货
+						</li>
+						<li class="sl">
+							<b>数量选择：</b>
+							<p class="jian" id="jian">-</p>
+							<p id="value">1</p>
+							<p class="jia" id="jia">+</p>
+							<p id="addgcar" class="addgcar">加入购物车</p>
+						</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<!--2详情信息-->
+			<div class="detail_top">
+				<ul class="ul_de1">
+					<li class="del_bg">
+						<a href="#">商品详情</a>
+					</li>
+					<li>
+						<a href="#">用户评价</a>
+					</li>
+					<li>
+						<a href="#">商品咨询</a>
+					</li>
+					<li>
+						<a href="#">菜匹配</a>
+					</li>
+				</ul>
+
+				<div class="ul_list">
+					<!--下面的列表-->
+					<ul class="ul_de2">
+						<li>类型 <span>白葡萄酒 干白</span></li>
+						<li>级别 <span>新西兰优质酒庄</span></li>
+						<li>色泽 <span>柠檬黄</span></li>
+						<li>建议醒酒时间 <span>即开即饮</span></li>
+					</ul>
+					<ul class="ul_de3">
+						<li>品牌中英文 <span>其他</span></li>
+						<li>酒精度 <span> 11.5% </span></li>
+						<li>酒体 <span>中低</span></li>
+						<li>适宜品尝温度 <span>8-12℃ </span></li>
+					</ul>
+					<ul class="ul_de4">
+						<li>葡萄品种<span>100%长相思(Sauvignon)</span></li>
+						<li>容量 <span>750ml</span></li>
+						<li>口感分类 <span>清爽</span></li>
+						<li>搭配菜肴<span>海鲜、烤鸡肉 </span></li>
+					</ul>
+					<ul class="ul_de5">
+						<li>产地 <span>新西兰(New Zealand) 马丁伯</span></li>
+						<li>香味分类 <span>桃子，甜瓜，干草，菠萝 </span></li>
+						<li>获奖情况 <span>Gold China wine and </span></li>
+						<li>橡木桶陈酿 <span>无 </span></li>
+					</ul>
+				</div>
+
+			</div>
+
+			<!--3.图片显示-->
+			<div class="xqimage">
+				<img src="../images/xq1.jpg" />
+				<img class="width1" src="../images/xq2.jpg" />
+			</div>
+
+			<!--4.使用表单构建-->
+			<div class="de_form">
+
+				<fieldset class="fieldset1">
+					<!--第1字符集-->
+					<legend>友情提示</legend>
+					<strong>本商品发货时，年份随机发货；由于年份不同，酒款信息，例如：酒精度、橡木桶陈酿时间，可能会有差异。 </strong>
+				</fieldset>
+
+				<fieldset class="fieldset2">
+					<!--第2字符集-->
+					<legend>酒庄介绍</legend>
+					<ul>
+						<li class="i">
+							<a href="list.html"><img height="230" src='../images/index/01.jpg' width="330" /></a>
+						</li>
+						<li class="des">
+							<b>默多克詹姆斯酒庄-只生产独特的红酒 </b> 默多克詹姆斯酒庄是马丁堡生产红酒的先驱。20多年前，Roger和他的妻子Jill立定了生产独特葡萄酒的目标，第一次在马丁堡地区的河石梯田上种下了黑皮诺和塞拉。默多克詹姆斯葡萄酒是为了纪念创始人Roger Fraser的父亲而命名的。今天，Roger的儿子Carl Fraser也是一名酿酒师。蓝礁石葡萄园里以石灰为基础的土壤，使得默多克詹姆斯酒庄生产出的白葡萄酒富含清新水果口味和回味悠长的矿物质味。忠于本地的风土条件，默多克詹姆斯醇厚，结构优雅。 </li>
+					</ul>
+					<ul>
+						<li class="i">
+							<a href="#"><img height="230" src='../images/index/02.jpg' width="330" /></a>
+						</li>
+						<li class="des">
+							<b>蓝礁石葡萄园 </b> 默多克詹姆斯的蓝礁石葡萄园坐落在枯河梯田上，享有优质的葡萄生长土壤，混合石灰钙，粘土和高矿物质的河泥。一百万年以前，澳洲地壳冲击太平洋地壳的河床，致使今天的蓝礁石山脉富含石灰岩。这里独特的地理位置，和马丁堡日暖夜凉的气候，根植于默多克詹姆斯酒庄生产的葡萄酒中，形成其独特的风味。 </li>
+					</ul>
+				</fieldset>
+
+				<fieldset class="fieldset2">
+					<!--第3字符集-->
+					<legend>酒庄介绍</legend>
+					<ul>
+						<li class="i">
+							<a href="#"><img height="230" src='../images/index/01.jpg' width="330" /></a>
+						</li>
+						<li class="des">
+							<b>默多克詹姆斯酒庄-只生产独特的红酒 </b> 默多克詹姆斯酒庄是马丁堡生产红酒的先驱。20多年前，Roger和他的妻子Jill立定了生产独特葡萄酒的目标，第一次在马丁堡地区的河石梯田上种下了黑皮诺和塞拉。默多克詹姆斯葡萄酒是为了纪念创始人Roger Fraser的父亲而命名的。今天，Roger的儿子Carl Fraser也是一名酿酒师。蓝礁石葡萄园里以石灰为基础的土壤，使得默多克詹姆斯酒庄生产出的白葡萄酒富含清新水果口味和回味悠长的矿物质味。忠于本地的风土条件，默多克詹姆斯醇厚，结构优雅。 </li>
+					</ul>
+					<ul>
+						<li class="i"><img height="230" src='../images/index/02.jpg' width="330" /></li>
+						<li class="des">
+							<b>蓝礁石葡萄园 </b> 默多克詹姆斯的蓝礁石葡萄园坐落在枯河梯田上，享有优质的葡萄生长土壤，混合石灰钙，粘土和高矿物质的河泥。一百万年以前，澳洲地壳冲击太平洋地壳的河床，致使今天的蓝礁石山脉富含石灰岩。这里独特的地理位置，和马丁堡日暖夜凉的气候，根植于默多克詹姆斯酒庄生产的葡萄酒中，形成其独特的风味。 </li>
+					</ul>
+				</fieldset>
+
+				<fieldset class="fieldset3">
+					<!--第4字符集-->
+					<legend>配餐建议</legend>
+					<table>
+						<tbody>
+							<tr>
+								<td>
+									<a href="#" alt=""><img height="207" src='../images/index/04.jpg' /></a>
+								</td>
+								<td>
+									<a href="#" alt=""><img height="207" src='../images/index/05.jpg' /></a>
+								</td>
+								<td>
+									<a href="#" alt=""><img height="207" src='../images/index/06.jpg' /></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table>
+						<tbody>
+							<tr>
+								<td style="width:297px" valign="top">
+									<font face="宋体" size="2"><b>刺身</b></font>
+								</td>
+								<td style="width:297px" valign="top">
+									<font face="宋体" size="2"><b>色拉</b> </font>
+								</td>
+								<td style="width:297px" valign="top">
+									<font face="宋体" size="2"><b>甜点</b></font>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+
+				<fieldset class="fieldset5">
+					<legend>葡萄品种</legend>
+					<!--第5字符集-->
+					<ul>
+						<li class="i"><img height="230" src='../images/index/07.jpg' width="330" /></li>
+						<li class="des">
+							<b>长相思（Sauvignon Blanc） </b> 别名：白索维浓、苏维浓，原产法国，是法国古老的酿酒品种。长相思所产葡萄酒酸味强，辛辣口味重，酒香浓郁且风味独具，非常容易辨认。青苹果及醋栗果香混合植物性香(如青草香和黑茶鹿子树牙香)常见，在石灰土质则常有火石味和白色水果香。长相思在卢瓦尔河谷的表现很有特色，由于气候凉，酸度高得让舌头打卷-当然这是很结实有力的酸。这种香气很清爽，有醋栗树叶子、荨麻、草、柚子皮、白色水果、矿石等气味，特别是年轻的酒。
+						</li>
+					</ul>
+				</fieldset>
+
+				<fieldset class="fieldset6">
+					<legend>产地介绍</legend>
+					<!--第6字符集-->
+					<ul>
+						<li class="i"><img height="230" src='../images/index/08.jpg' width="330" /></li>
+						<li class="des">
+							<b>马丁伯勒（Martinborough）</b> 马丁伯勒位于新西兰北岛南端，与马博罗隔库克海峡（CookStrait）相望，是新西兰的一大知名葡萄酒产区。马丁伯勒的土壤气候条件对于芳香型白葡萄品种生长堪称理想，它可以说是以出产优质的白葡萄酒取胜的产区。不过在区内我们仍然能找到一些非常优秀的PinotNoir(黑皮诺)葡萄园。马丁伯勒拥有独特的葡萄酒村落，在那里聚集着25个以上的精品葡萄酒庄园，大部分庄园只需要步行就能游逛。在那里每年还举行独一无二的马丁伯勒葡萄酒烧烤美食节，每届都会吸引大量游客去那里品尝美食和美酒。
+						</li>
+					</ul>
+					<ul>
+						<li class="i"><img height="230" src='../images/index/09.jpg' width="330" /></li>
+						<li class="des">
+							<b>新西兰(New Zealand)</b> 新西兰是一个发展相当晚的葡萄酒产国，虽然葡萄园的面积在近年来快速增长，但依旧是一个葡萄园面积仅2万多公顷、产量约1亿多升的小型产国。可是这完全不 影响新西兰跻身为全球知名的葡萄酒产区。独特的自然条件让当地的葡萄酒拥有其他产地的葡萄酒难以比拟的独特风格，拥有干净纯美的水果香气、可口诱人的爽口 酸味。特别是马尔堡(Marlborough)产区的长相思，以及马丁伯勒(Martinborough)和中奥塔哥(CentralOtago)产的黑 皮诺，都已经是不可忽视的新经典产区.新西兰的长相思和黑比诺现在均已列入世界顶级葡萄酒行列，未来发展潜力巨大。
+						</li>
+					</ul>
+				</fieldset>
+
+				<fieldset class="fieldset7">
+					<!--第7字符集-->
+					<legend>物流仓储</legend>
+					<p><img src="../images/index/10.jpg" style="width: 920px; height: 355px;" /></p>
+				</fieldset>
+
+			</div>
+
+			<!--底部-->
+			<div class="foot">
+				<div class="foot_top">
+					<!--上-->
+					<ul class="top_list1">
+						<!--列表1-->
+						<h3>也买酒承诺</h3>
+						<li>
+							<span><a href="#"><img src="../css/img/f1.gif"/></a></span>
+							<dl>
+								<dt><a href="#">正品保障</a></dt>
+							</dl>
+						</li>
+						<li>
+							<span><a href="#"><img src="../css/img/f2.gif"/></a></span>
+							<dl>
+								<dt><a href="#">30天退货</a></dt>
+								<dt>30天无理由退换货</dt>
+							</dl>
+						</li>
+						<li>
+							<span><a href="#"><img src="../css/img/f3.gif"/></a></span>
+							<dl>
+								<dt><a href="#">恒温恒湿</a></dt>
+								<dt>6天会恒温恒湿</dt>
+							</dl>
+						</li>
+						<li>
+							<span><a href="#"><img src="../css/img/f4.gif"/></a></span>
+							<dl>
+								<dt><a href="#">免运费</a></dt>
+								<dt>满150元包邮</dt>
+							</dl>
+						</li>
+						<li>
+							<span><a href="#"><img src="../css/img/f5.gif"/></a></span>
+							<dl>
+								<dt><a href="#">慢就返</a></dt>
+								<dt>3大城市没有按时送达，也买酒就返</dt>
+							</dl>
+						</li>
+
+					</ul>
+
+					<ul class="top_list2">
+						<!--列表2-->
+						<h3>也买酒承诺</h3>
+						<li>
+							<h4>购物指南</h4>
+							<a href="#">帐户注册</a>
+							<a href="#">购物流程</a>
+							<a href="#">积分制度</a>
+							<a href="#">礼品卡</a>
+							<a href="#">会员权益</a>
+							<a href="#">会员权益</a>
+						</li>
+						<li>
+							<h4>支付帮助</h4>
+							<a href="#">货到付款</a>
+							<a href="#">在线支付</a>
+							<a href="#">银行转帐</a>
+							<a href="#">发票制度</a>
+						</li>
+						<li>
+							<h4>专业特色</h4>
+							<a href="#">存酒库</a>
+							<a href="#">酒类交易中心</a>
+							<a href="#">全国门店分布</a>
+							<a href="#">香港免税</a>
+							<a href="#">期酒交易</a>
+							<a href="#">酒窖</a>
+						</li>
+						<li>
+							<h4>物流配送</h4>
+							<a href="#">150元免运费</a>
+							<a href="#">配送范围</a>
+							<a href="#">慢就返</a>
+						</li>
+						<li>
+							<h4>关于我们</h4>
+							<a href="#">关于也买酒</a>
+							<a href="#">联系我们</a>
+							<a href="#">媒体聚焦</a>
+							<a href="#">隐私声明</a>
+							<a href="#">诚招英才</a>
+							<a href="#">4008208060</a>
+						</li>
+						<li>
+							<h4>招商合作</h4>
+							<a href="#">经销商招募</a>
+							<a href="#">连锁店招募</a>
+							<a href="#">也买联盟</a>
+						</li>
+
+					</ul>
+
+					<ul class="top_list3">
+						<!--列表3-->
+						<h3>关注也买酒</h3>
+						<li>
+							<h4>也买酒APP</h4>
+							<a href="#"><img src="../css/img/f8.gif" /></a>
+							<a href="#"><img src="../css/img/f9.gif" /></a>
+						</li>
+						<li id="dl">
+							<a href="#"><img src="../css/img/f7.gif" /></a>
+							<dl>
+								<dt class="dt">也买酒官方微信</dt>
+								<dt>微信扫描二维码，随时随地与小也亲密接触，精彩活动，劲爆优惠触手可得！</dt>
+							</dl>
+						</li>
+						<li id="sina">
+							<a href="#"><img src="../css/img/f6.gif" /></a>
+							<a href="#" id="inlne">新浪微博</a><br />
+							<a href="#" id="tips"><img src="../css/img/f10.gif" /></a>
+						</li>
+
+					</ul>
+				</div>
+
+				<div class="foot_mid">
+					<!--中 -->
+					<ul id="midlist">
+						<li>
+							<a href="#">关于也买酒</a>
+						</li>
+						<li>
+							<a href="#">联系我们</a>
+						</li>
+						<li>
+							<a href="#">媒体聚焦</a>
+						</li>
+						<li>
+							<a href="#">诚招英才</a>
+						</li>
+						<li class="borderno">
+							<a href="#">隐私声明</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="registBtm">
+					<!--下-->
+					<ul class="glist1">
+						<!--上1-->
+						<li>
+							<a href="#"><img src="../css/img/re1.jpg" alt="" /></a>仅限18周岁以上人士购买&ensp;&ensp;|</li>
+						<li><img src="../css/img/g2.gif" alt="" />
+							<a href="#"> 网络社会征信网</a>&ensp;&ensp;|</li>
+						<li><img src="../css/img/g3.gif" alt="" />上海工商&ensp;&ensp;|</li>|
+						<li>京公网安备11010502013828</li>
+					</ul>
+
+					<ul class="glist2">
+						<!--中2-->
+						<li>Copyright 2006-2014 也买酒 yesmywine.com 版权所有 &ensp;&ensp;|</li>
+						<li>
+							<a href="#">沪ICP备09093441号</a>
+						</li>
+					</ul>
+
+					<ul class="glist3">
+						<!--下3-->
+						<li>
+							<a href="#"><img src="../css/img/chengxin.png" alt="" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="../css/img/globle.jpg" /></a>
+						</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+	</body>
+
+</html>

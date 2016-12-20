@@ -1,0 +1,770 @@
+/***********************列表页样式**********************/
+
+
+/******列表页大盒子******/
+
+.listbox {
+	position: relative;
+	width: 1280px;
+	height: 3700px;
+	margin: 0 auto;
+}
+
+
+/******右侧的固定条******/
+
+.fixedbox {
+	width: 34px;
+	height: 4590px;
+	background: rgb(126, 0, 1);
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding-top: 200px;
+}
+
+.fixedbox a.fixedbox_top {
+	padding-top: 200px;
+}
+
+.fixedbox div#addgoods {
+	/*购物车添加会变化*/
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 30px;
+	font-size: 20px;
+}
+
+
+/******头部header******/
+
+.header_top {
+	width: 1198px;
+	height: 29px;
+	padding-left: 40px;
+	/*给头部一个maigin*/
+	padding-right: 40px;
+	border: 1px solid rgb(235, 231, 227);
+	background: rgb(236, 231, 227);
+	line-height: 29px;
+	margin: 0 auto;
+}
+
+.header .header_top span.header_span {
+	/*会员的*/
+	color: red;
+	margin-top: 10px;
+	font-weight: 600;
+	/*加粗字体*/
+}
+
+.header .header_top span.header_denglu a {
+	/*登录|注册*/
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.header .header_top span.header_denglu a:hover {
+	/*登录|注册*/
+	color: rgb(211, 22, 27);
+	/*鼠标滑过显示的颜色*/
+}
+
+.header .header_top ul.header_top_right {
+	/*右边列表*/
+	float: right;
+}
+
+.header .header_top ul.header_top_right li {
+	/*右边列表的Li*/
+	float: left;
+}
+
+.header .header_top ul.header_top_right li a {
+	/*右边列表的Li里面的a标签*/
+	border-right: 1px solid rgb(156, 140, 134);
+	padding: 0 7px;
+}
+
+.header .header_top ul.header_top_right li a:hover {
+	/*右边列表的Li里面的a标签*/
+	color: rgb(161, 16, 17);
+}
+
+.header .header_top ul.header_top_right li a.no_border {
+	/*右边列表的Li里面的a标签最后一个无边*/
+	border-right: none;
+}
+
+.header .header_top ul.header_top_right li a.phone img {
+	/*右边列表的Li里面的a标签里面的手机小图标*/
+	margin-right: 2px;
+	width: 20px;
+	height: 17px;
+	line-height: 30px;
+}
+
+.header p {
+	/*右边列表的我的账户的下拉框*/
+	position: absolute;
+	width: 75px;
+	height: 80px;
+	background: white;
+	border: 1px solid #FFFFFF;
+	box-shadow: 0 0 1px 1px;
+	top: 27px;
+	right: 270px;
+}
+
+.header p.myuser a {
+	width: 75px;
+	height: 26.7px;
+	display: block;
+	float: left;
+}
+
+.header p.myuser a:hover {
+	background: rgb(161, 16, 17);
+	text-decoration: none;
+	color: white;
+}
+
+.header p.myphone {
+	/*右边列表的我的手机的下拉框*/
+	position: absolute;
+	width: 140px;
+	height: 90px;
+	background: white;
+	border: 1px solid #FFFFFF;
+	box-shadow: 0 0 1px 1px;
+	top: 27px;
+	right: 140px;
+}
+
+.header p.myphone img.er {
+	/*右边列表的我的手机的下拉框二维码*/
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	top: 20px;
+	left: 10px;
+}
+
+.header p.myphone img.ios {
+	/*右边列表的我的手机的下拉框苹果*/
+	width: 50px;
+	height: 20px;
+	position: absolute;
+	top: 20px;
+	left: 80px;
+}
+
+.header p.myphone img.android {
+	/*右边列表的我的手机的下拉框安卓*/
+	width: 50px;
+	height: 20px;
+	position: absolute;
+	top: 50px;
+	left: 80px;
+}
+
+.header p.myphone span span {
+	/*右边列表的我的手机的下拉框*/
+	top: 3px;
+	color: red;
+}
+
+
+/********************logo图标********************/
+
+.header .header_logo {
+	width: 1200px;
+	height: 100px;
+	position: relative;
+	padding: 0 40px;
+	background: #f1eeed;
+	margin: 0 auto;
+}
+
+.header .header_logo img {
+	display: block;
+	position: absolute;
+	top: 10px;
+}
+
+
+/********************搜索框 按钮 购物车********************/
+
+.header .header_logo .goods_form {
+	/* 表单form,定位*/
+	position: relative;
+	left: 600px;
+	top: 30px;
+}
+
+.header .header_logo .goods_form input {
+	border: 1px solid red;
+	width: 380px;
+	height: 35px;
+	line-height: 35px;
+}
+
+.header .header_logo .goods_form button.search {
+	width: 80px;
+	height: 35px;
+	background: rgb(211, 22, 27);
+	color: white;
+	text-align: center;
+	line-height: 35px;
+}
+
+.header .header_logo .goods_form button.gcar {
+	width: 125px;
+	height: 35px;
+	background: rgb(164, 132, 113);
+	color: white;
+	text-align: center;
+	line-height: 35px;
+	position: absolute;
+	top: 2px;
+	left: 490px;
+}
+
+.header .header_logo .goods_form span {
+	margin-top: 3px;
+	display: block;
+}
+
+.header .header_logo .goods_form span a {
+	margin-left: 8px;
+}
+
+.header .header_logo .goods_form span a:hover {
+	color: rgb(161, 16, 17);
+}
+
+
+/*********************导航条及下拉菜单的css样式*********************/
+
+.nav {
+	/*导航条*/
+	width: 1200px;
+	height: 35px;
+	background: rgb(211, 22, 27);
+	/*背景色*/
+	padding-left: 40px;
+	/*导航条加padding*/
+	padding-right: 40px;
+	font-size: 14px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.nav ul {
+	position: absolute;
+}
+
+.nav ul.nav_ul li {
+	float: left;
+	padding-right: 18px;
+	padding-left: 18px;
+}
+
+.nav ul.nav_ul li:hover {
+	background: rgb(188, 0, 1);
+}
+
+.nav ul.nav_ul li a:hover {
+	text-decoration: none;
+}
+
+.nav ul.nav_ul li a {
+	/* li列表下面*/
+	color: white;
+	/*覆盖之前的字体颜色*/
+	line-height: 35px;
+	border-right: 1px solid rbg(177, 30, 25);
+}
+
+.nav ul.nav_ul p {
+	/*对p选酒中心设置*/
+	display: inline-block;
+	/* 装成行内块元素*/
+	float: left;
+	/*浮动才能在列表的左边*/
+}
+
+.nav ul.nav_ul p a.choosemid {
+	/*对选酒中心设置,也就是li下面p，单独设置*/
+	display: inline-block;
+	/* 转为行内块元素*/
+	font-family: "微软雅黑";
+	font-weight: bolder;
+	width: 200px;
+	height: 35px;
+	color: #fff;
+	line-height: 35px;
+	background: rgb(161, 16, 17);
+	letter-spacing: 5px;
+	/* 控制文字的间距为5px 美观*/
+}
+
+.nav ul.nav_ul p a.choosemid:hover {
+	/*鼠标滑过,去掉下划线*/
+	text-decoration: none;
+}
+
+.nav ul.nav_ul p a.choosemid img {
+	/* 选酒中心的小图标*/
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+/***********内容部分的左边content_left*************/
+
+.content {
+	/*内容（左和右）*/
+	margin: 0 auto;
+	width: 1280px;
+	height: 4000px;
+}
+
+.content .content_left {
+	/*左边内容*/
+	float: left;
+	height: 4000px;
+}
+
+.content .content_right {
+	/*右边内容*/
+	float: left;
+	margin-left: 8px;
+	width: 994px;
+	height: 4000px;
+}
+
+
+/*******左边的上1 :所有的类目********/
+
+.content .content_left .con_ltop {
+	width: 198px;
+	height: 390px;
+	border: 1px solid rgb(232, 227, 221);
+	border-bottom: 2px solid rgb(232, 227, 221);
+	margin-top: 30px;
+	margin-left: 40px;
+	overflow: hidden;
+}
+
+.content .content_left .con_ltop h2 {
+	margin: 0;
+	padding: 0;
+	padding-left: 22px;
+	height: 41px;
+	line-height: 41px;
+	color: #333333;
+	background: rgb(232, 227, 221);
+}
+
+.content .content_left .con_ltop ul h3 {
+	margin: 0;
+	padding: 0;
+	width: auto;
+	height: 40px;
+	line-height: 40px;
+	background: #fbfaf9;
+	border-bottom: 1px solid rgb(232, 227, 221);
+	cursor: pointer;
+}
+
+.content .content_left .con_ltop ul h3 img {
+	margin-left: 12px;
+	line-height: 40px;
+	margin-right: 12px;
+}
+
+.content .content_left .con_ltop ul li {
+	margin: 0;
+	padding: 0;
+	height: 30px;
+	padding-top: 5px;
+	padding-left: 30px;
+}
+
+
+/**********左中2************/
+
+.content .content_left .con_lmid {
+	/*中间的大盒子*/
+	width: 198px;
+	height: auto;
+	border: 1px solid rgb(232, 227, 221);
+	margin-left: 40px;
+	margin-top: 10px;
+}
+
+.content .content_left .con_lmid h2 {
+	/*标题 一周销售排行*/
+	margin: 0;
+	padding: 0;
+	padding-left: 22px;
+	height: 41px;
+	line-height: 41px;
+	color: #333333;
+	background: rgb(232, 227, 221);
+}
+
+.content .content_left .con_lmid ul h3 {
+	/*标题 一周销售排行*/
+	margin: 0;
+	padding: 0;
+	margin-left: 6px;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid rgb(232, 227, 221);
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.content .content_left .con_lmid ul h3 img {
+	width: 16px;
+	height: 14px;
+	margin-right: 2px;
+}
+
+.content .content_left .con_lmid ul li {
+	/*点击以后出现的内容*/
+	width: 198px;
+	height: 130px;
+	position: relative;
+	border-bottom: 1px solid rgb(232, 227, 221);
+}
+
+.content .content_left .con_lmid ul li img {
+	/*小图标*/
+	width: 16px;
+	height: 14px;
+	margin-left: 6px;
+	margin-right: 2px;
+	position: absolute;
+	top: 10px;
+	left: 2px;
+}
+
+.content .content_left .con_lmid ul li b>img {
+	/*酒*/
+	width: 60px;
+	height: 90px;
+	position: absolute;
+	top: 20px;
+	left: 15px;
+}
+
+.content .content_left .con_lmid ul li p {
+	/*标题文本*/
+	width: 88px;
+	height: 42px;
+	margin-left: 95px;
+	position: absolute;
+	left: auto;
+	top: 20px;
+}
+
+.content .content_left .con_lmid ul li strong {
+	/*价钱*/
+	color: #c53f4c;
+	position: absolute;
+	top: 80px;
+	right: 30px;
+	font-size: 20px;
+}
+
+
+/***********左下3**************/
+
+.content .content_left .con_lbtm {
+	width: 198px;
+	height: 1950px;
+	margin-left: 40px;
+	overflow: hidden;
+	margin-top: 10px;
+	border: 1px solid rgb(232, 227, 221);
+}
+
+.content .content_left .con_lbtm h2 {
+	margin: 0;
+	padding: 0;
+	padding-left: 22px;
+	height: 41px;
+	line-height: 41px;
+	color: #333333;
+	background: rgb(232, 227, 221);
+}
+
+.content .content_left .con_lbtm ul {
+	/*一个格子ul*/
+	margin: 0;
+	padding: 3px 10px 0 10px;
+	padding-left: 22px;
+	height: 235px;
+	position: relative;
+	border-bottom: 2px dashed rgb(232, 227, 221);
+}
+
+.content .content_left .con_lbtm ul img {
+	/*ul下面的图片*/
+	width: 90px;
+	height: 110px;
+	position: absolute;
+	left: 28%;
+}
+
+.content .content_left .con_lbtm ul li.listli {
+	/*图片下面的中文*/
+	width: 180px;
+	height: 110px;
+	position: absolute;
+	top: 120px;
+}
+
+.content .content_left .con_lbtm ul li.listli2 {
+	/*图片下面的英文*/
+	width: 180px;
+	height: 110px;
+	position: absolute;
+	top: 150px;
+}
+
+.content .content_left .con_lbtm ul p {
+	/*图片下面的价格*/
+	width: 180px;
+	height: 110px;
+	position: absolute;
+	top: 190px;
+	left: 40%;
+	color: #c53f4c;
+	font-size: 18px;
+}
+
+
+/***********************内容右边的**************************/
+
+
+/****最上面的搜索结果*****/
+
+.content .content_right ul.con_search {
+	margin-top: 30px;
+	margin-left: 8px;
+	font-size: 12px;
+	color: #666;
+}
+
+.content .content_right ul.con_search a {
+	margin: 0 5px;
+	height: 30px;
+	line-height: 30px;
+	color: #c53f4c;
+}
+
+.content .content_right ul.con_search li {
+	margin: 0 5px;
+	height: 30px;
+	line-height: 30px;
+	float: right;
+}
+
+
+/***************right1**************/
+
+.content .content_right .con_rtop1 {
+	width: 990px;
+	height: 162px;
+	border: 1px solid rgb(232, 227, 221);
+	color:
+}
+
+.content .content_right .con_rtop1 li {
+	width: auto;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 20px;
+	border-bottom: 1px dashed rgb(232, 227, 221);
+}
+
+.content .content_right .con_rtop1 li.no_btm {
+	border-bottom: none;
+}
+
+.content .content_right .con_rtop1 li a {
+	margin: 0 13px;
+}
+
+
+/***************right2**************/
+
+.content .content_right .con_rtop2 {
+	width: 990px;
+	height: 62px;
+	line-height: 62px;
+	margin-top: 10px;
+	border: 1px solid rgb(232, 227, 221);
+	border-top: 2px solid #c63f4e;
+}
+
+.content .content_right .con_rtop2 p {
+	/*左边列表*/
+	float: left;
+	width: 60px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	border: 1px solid rgb(232, 227, 221);
+	margin-right: 5px;
+	font-size: 14px;
+	margin-top: 14px;
+	cursor: pointer;
+}
+
+.content .content_right .con_rtop2 p.redbg {
+	/*第一个高亮*/
+	margin-left: 10px;
+	background: #c63f4e;
+	color: white;
+}
+
+.content .content_right .con_rtop2 ul {
+	/*右边*/
+	float: right;
+	line-height: 62px;
+}
+
+.content .content_right .con_rtop2 ul li {
+	/*里面的Li*/
+	float: left;
+	margin-right: 14px;
+	line-height: 60px;
+	font-size: 14px;
+}
+
+.content .content_right .con_rtop2 ul li img {
+	margin-top: 10px;
+	width: 22px;
+	height: 22px;
+}
+
+
+/***************right3  用ajax请求数据**************/
+
+.content .content_right .con_ajaxrequset {
+	width: 990px;
+	height: 2613px;
+	margin-top: 10px;
+}
+
+.ajaxlist {
+	/*ul*/
+	width: 989px;
+	height: auto;
+}
+
+li.ajaxli {
+	/*一个li*/
+	width: 183px;
+	height: 390px;
+	border: 3px solid rgb(232, 227, 221);
+	margin-right: 8px;
+	margin-bottom: 10px;
+	float: left;
+}
+
+ul.ajaxlist li:hover {
+	/*一个li鼠标滑过边框变色*/
+	border: 3px solid #c63f4e;
+	box-shadow: 0 5px 5px 2px;
+}
+
+ul.ajaxlist li.ajaxli img {
+	/*li里面的图片*/
+	margin-left: 40px;
+	margin-top: 10px;
+}
+
+.Img {
+	/*li里面的图片*/
+	margin-left: 40px;
+	margin-top: 10px;
+}
+
+.title {
+	/*标题title*/
+	width: 175px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 8px;
+	margin-bottom: 0;
+	background: #f8f8f5;
+	overflow: hidden;
+}
+
+.place {
+	/*p价格*/
+	font-size: 16px;
+	width: 175px;
+	height: 30px;
+	margin-top: 0;
+	line-height: 30px;
+	background: #f8f8f5;
+	padding-left: 8px;
+}
+
+.price {
+	/*p价格*/
+	font-size: 20px;
+	width: 175px;
+	height: 60px;
+	margin-top: 0;
+	line-height: 60px;
+	color: rgb(206, 0, 0);
+	background: #f8f8f5;
+	padding-left: 8px;
+}
+
+ul.ajaxlist li.ajaxli div.div {
+	/*下面列表*/
+	float: left;
+	width: 59.5px;
+	height: 44px;
+	border: 1px solid rgb(232, 227, 221);
+	border-left: none;
+	border-bottom: none;
+	text-align: center;
+}
+
+.no_nobian {
+	border-right: none;
+}
+
+.ratepercent {
+	/*好评度*/
+	text-align: center;
+	color: rgb(206, 0, 0);
+}
+
+.soldnum {
+	/*评论*/
+	text-align: center;
+	color: #33a5df;
+}
+
+.commentCount {
+	/*评论*/
+	text-align: center;
+	color: #b57c5b;
+	border-right: none;
+}

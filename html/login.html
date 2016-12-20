@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登陆也买酒页面</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<!--重置样式-->
+		<link rel="stylesheet" type="text/css" href="../css/regist.css" />
+		<!--引用注册页面的头部和尾部-->
+		<link rel="stylesheet" type="text/css" href="../css/login.css" />
+		<!--引入样式-->
+		<script src="../assets/jquery-1.12.0.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入jq文件-->
+		<script src="../js/login.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入js文件-->
+		<script src="../js/cookie01.js" type="text/javascript" charset="utf-8"></script>
+		<!--cookie封装函数-->
+		<script type="text/javascript">
+			$(function() { //在控件里面鼠标失去焦点改变控件
+				$(":input").focus(function() {
+					$(this).addClass("focus"); //获取焦点就改变样式						   
+				}).blur(function() {
+					$(this).removeClass("focus");
+				});
+			})
+		</script>
+
+	</head>
+
+	<body>
+
+		<div class="login">
+			<div class="loginTop">
+				<!--头部-->
+				<a href="index.html"><img id="loginlogo" src="../css/img/logoye.png" alt="" /></a>
+				<!--左边logo-->
+				<img id="login_right" src="../css/img/head_right.jpg" alt="" />
+				<!--右边	-->
+			</div>
+
+			<div class="loginMid">
+				<!--登陆内容-->
+				<div class="form">
+					<!--盒子-->
+					<div class="div">
+						<fieldset>
+							<legend>也买酒登陆</legend>
+							<input id="tel" type="text" maxlength="11" placeholder="请输入手机号" /><br />
+							<input id="pwd" type="password" maxlength="16" placeholder="请输入密码" /><br />
+							<input type="checkbox" />自动登陆<br />
+							<input id="btn" type="submit" value="登陆" />
+						</fieldset>
+
+						<a href="#">[忘记密码？]</a>&ensp;&ensp;
+						<a href="regist.html">[注册新账号]</a>
+					</div>
+
+					<ul class="list">
+						<!--表单下面的合作-->
+						<h4>使用合作网站 账号登陆:</h4>
+						<li>
+							<a href="#"><img src="../css/img/longin01.gif" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="../css/img/login02.gif" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="../css/img/btn_qq.jpg" /></a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+
+			<div class="loginBtm">
+				<!--底部-->
+				<ul class="glist1">
+					<!--上-->
+					<li>
+						<a href="#"><img src="../css/img/re1.jpg" alt="" /></a>仅限18周岁以上人士购买&ensp;&ensp;|</li>
+					<li><img src="../css/img/g2.gif" alt="" />
+						<a href="#"> 网络社会征信网</a>&ensp;&ensp;|</li>
+					<li><img src="../css/img/g3.gif" alt="" />上海工商&ensp;&ensp;|</li>|
+					<li>京公网安备11010502013828</li>
+				</ul>
+
+				<ul class="glist2">
+					<!--中-->
+					<li>Copyright 2006-2014 也买酒 yesmywine.com 版权所有 &ensp;&ensp;|</li>
+					<li>
+						<a href="#">沪ICP备09093441号</a>
+					</li>
+				</ul>
+
+				<ul class="glist3">
+					<!--下-->
+					<li>
+						<a href="#"><img src="../css/img/chengxin.png" alt="" /></a>
+					</li>
+					<li>
+						<a href="#"><img src="../css/img/globle.jpg" /></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+
+</html>

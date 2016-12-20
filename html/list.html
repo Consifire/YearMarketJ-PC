@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>也买酒商品列表页</title>
+
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<!--重置样式-->
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<!--头部-->
+		<link rel="stylesheet" type="text/css" href="../css/list.css" />
+		<!--详情页的样式-->
+
+		<script src="../assets/jquery-1.12.0.js" type="text/javascript" charset="utf-8"></script>
+		<!--jq文件-->
+		<script src="../js/list.js" type="text/javascript" charset="utf-8"></script>
+		<!--list.js文件-->
+
+	</head>
+
+	<body>
+
+		<div class="listbox">
+			<!--列表页大盒子，不给盒子很难对后面的进行定位-->
+
+			<div class="header">
+				<!--头部-->
+
+				<div class="header_top">
+					<!--最上头-->
+					<!--<左边>-->
+					<span>
+						<span class="header_span">234567</span>位会员选择
+					<span class="header_denglu"><a href="login.html">登录&ensp;</a>|<a href="regist.html">注册</a></span>
+					</span>
+					<!--<右边>-->
+					<ul class="header_top_right">
+						<li>
+							<a href="#">会员俱乐部</a>
+						</li>
+						<li>
+							<a href="#">签到</a>
+						</li>
+						<li>
+							<a href="#">我的账户<img src="../images/images/img/sanjiao.jpg" /></a>
+						</li>
+						<li>
+							<a href="#" class="phone"><img src="../images/images/img/phonelogo.png" />手机版</a>
+						</li>
+						<li>
+							<a href="#">红酒交易中心</a>
+						</li>
+						<li>
+							<a href="#">也买服务</a>
+						</li>
+						<li>
+							<a href="#" class="no_border">设置勿扰</a>
+						</li>
+					</ul>
+
+				</div>
+
+				<!--logo搜索框-->
+				<div class="header_logo">
+					<!--左边的logo-->
+					<img src="../images/images/img/logoye.png" />
+
+					<!--右边的搜索框-->
+					<form class="goods_form">
+						<input type="text" name="goodsname" value="" placeholder="请输入你要查找的商品" />
+						<!--输入框-->
+						<button class="search">搜索</button>
+						<p class="gcar">
+							<a href="gcar.html"><img src="../images/images/img/car.png" />购物车</a>
+						</p>
+						<span>
+							<a href="#">薄若莱2016新酒预订</a>
+							<a href="#">也买酒学院</a><a href="#">婚庆酒</a>
+							<a href="#">特色陈年老酒</a><a href="#">名庄酒</a>
+						</span>
+					</form>
+
+				</div>
+
+				<!--头部的两个下拉框-->
+				<p class="myuser">
+					<!--我的账户下拉框-->
+					<a href="#">我的订单</a>
+					<a href="#">我的优惠券</a>
+					<a href="#">我的收藏夹</a>
+				</p>
+				<p class="myphone">
+					<!--我的手机下拉框-->
+					<span>APP首单满<span>100得100</span></span>
+					<img class="er" src="../images/images/img/red-code.png" />
+					<img class="ios" src="../images/images/img/ios.png" />
+					<img class="android" src="../images/images/img/android.png" />
+				</p>
+
+			</div>
+
+			<div class="nav">
+
+				<ul class="nav_ul">
+					<!--导航条-->
+					<p>
+						<a href="#" class="choosemid"><img src="../images/images/img/listlogo.jpg" />选酒中心</a>
+					</p>
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="#">超值抢购</a>
+					</li>
+					<li>
+						<a href="#">精品奖购</a>
+					</li>
+					<li>
+						<a href="#">名庄特卖</a>
+					</li>
+					<li>
+						<a href="#">香港免税</a>
+					</li>
+					<li>
+						<a href="#">国酒馆</a>
+					</li>
+				</ul>
+
+			</div>
+			<!--导航-->
+
+			<div class="fixedbox">
+				<!--右侧固定条	 -->
+				<a href="#" class="fixedbox_top"><img src="../images/images/img/x3.gif" /></a>
+				<a href="gcar.html"><img src="../images/images/img/x4.jpg" /></a>
+				<div id="addgoods"></div>
+				<a href="#"><img src="../images/images/img/x6.gif" /></a>
+				<a href="#"><img src="../images/images/img/x7.gif" /></a>
+				<a href="#"><img src="../images/images/img/x8.gif" /></a>
+			</div>
+
+			<div class="content">
+				<!--内容-->
+				<div class="content_left">
+					<!--内容左边-->
+					<div class="con_ltop">
+						<!--左上-->
+						<h2>所有类目</h2>
+						<!--点击列表变换-->
+						<ul id="show">
+							<h3><img src="../images/images/img/d1.gif"/>葡萄酒(49)</h3>
+							<li>
+								<a href="#">红葡萄酒（16）</a>
+							</li>
+							<li>
+								<a href="#">白葡萄酒（10）</a>
+							</li>
+							<li>
+								<a href="#">起泡酒（2）</a>
+							</li>
+						</ul>
+						<ul>
+							<h3><img src="../images/images/img/d2.gif"/>洋酒(13)</h3>
+							<li>
+								<a href="#">红葡萄酒（16）</a>
+							</li>
+							<li>
+								<a href="#">白葡萄酒（10）</a>
+							</li>
+							<li>
+								<a href="#">起泡酒（2）</a>
+							</li>
+						</ul>
+						<ul>
+							<h3><img src="../images/images/img/d2.gif"/>白酒(1943)</h3>
+							<li>
+								<a href="#">红葡萄酒（16）</a>
+							</li>
+							<li>
+								<a href="#">白葡萄酒（10）</a>
+							</li>
+							<li>
+								<a href="#">起泡酒（2）</a>
+							</li>
+						</ul>
+						<ul>
+							<h3><img src="../images/images/img/d2.gif"/>酒具(14)</h3>
+							<li>
+								<a href="#">红葡萄酒（16）</a>
+							</li>
+							<li>
+								<a href="#">白葡萄酒（10）</a>
+							</li>
+							<li>
+								<a href="#">起泡酒（2）</a>
+							</li>
+						</ul>
+						<ul>
+							<h3><img src="../images/images/img/d2.gif"/>食品(1)</h3>
+							<li>
+								<a href="#">红葡萄酒（16）</a>
+							</li>
+							<li>
+								<a href="#">白葡萄酒（10）</a>
+							</li>
+							<li>
+								<a href="#">起泡酒（2）</a>
+							</li>
+						</ul>
+						<ul>
+							<h3><img src="../images/images/img/d2.gif"/>黄酒(7)</h3>
+							<li>
+								<a href="#">红葡萄酒（16）</a>
+							</li>
+							<li>
+								<a href="#">白葡萄酒（10）</a>
+							</li>
+							<li>
+								<a href="#">起泡酒（2）</a>
+							</li>
+						</ul>
+
+					</div>
+
+					<div class="con_lmid">
+						<!--左中-->
+						<h2>一周销量排行</h2>
+						<ul>
+							<h3><img src="../images/images/img/d3.gif"/>拉菲传奇波尔多干红葡萄酒</h3>
+							<li>
+								<img src="../images/images/img/d3.gif" />
+								<p>拉菲传奇波尔多干红葡萄酒</p>
+								<b><img src="../images/images/g11.jpg"/></b>
+								<strong>￥65.0</strong>
+							</li>
+						</ul>
+						<ul>
+							<h3><img src="../images/images/img/d4.gif"/>克拉西湾干红葡萄酒</h3>
+							<li>
+								<img src="../images/images/img/d4.gif" />
+								<p>克拉西湾干红葡萄酒</p>
+								<b><img src="../images/images/g12.jpg"/></b>
+								<strong>￥77.0</strong>
+							</li>
+						</ul>
+						<ul>
+							<h3><img src="../images/images/img/d5.gif"/>拉昂城堡干红葡萄酒</h3>
+							<li>
+								<img src="../images/images/img/d5.gif" />
+								<p>拉昂城堡干红葡萄酒</p>
+								<b><img src="../images/images/g13.jpg"/></b>
+								<strong>￥129.0</strong>
+							</li>
+						</ul>
+						<ul>
+							<h3><img src="../images/images/img/d6.gif"/>黄尾袋鼠西拉红干红葡萄酒</h3>
+							<li>
+								<img src="../images/images/img/d6.gif" />
+								<p>黄尾袋鼠西拉红干红葡萄酒</p>
+								<b><img src="../images/images/g14.jpg"/></b>
+								<strong>￥265.0</strong>
+							</li>
+						</ul>
+						<ul>
+							<h3><img src="../images/images/img/d7.gif"/>拉菲传说干红葡萄酒</h3>
+							<li>
+								<img src="../images/images/img/d7.gif" />
+								<p>拉菲传说干红葡萄酒</p>
+								<b><img src="../images/images/g15.jpg"/></b>
+								<strong>￥95.0</strong>
+							</li>
+						</ul>
+						<ul>
+							<h3><img src="../images/images/img/d8.gif"/>美景湾珍藏干红葡萄酒</h3>
+							<li>
+								<img src="../images/images/img/d8.gif" />
+								<p>美景湾珍藏干红葡萄酒</p>
+								<b><img src="../images/images/g16.jpg"/></b>
+								<strong>￥215.0</strong>
+							</li>
+						</ul>
+						<ul>
+							<h3><img src="../images/images/img/d9.gif"/>康纳斯顿梅洛干红葡萄酒</h3>
+							<li>
+								<img src="../images/images/img/d9.gif" />
+								<p>康纳斯顿梅洛干红葡萄酒</p>
+								<b><img src="../images/images/g17.jpg"/></b>
+								<strong>￥165.0</strong>
+							</li>
+						</ul>
+						<ul>
+							<h3><img src="../images/images/img/d10.gif"/>拉薇干红葡萄酒</h3>
+							<li>
+								<img src="../images/images/img/d10.gif" />
+								<p>拉薇干红葡萄酒</p>
+								<b><img src="../images/images/g8.jpg"/></b>
+								<strong>￥98.0</strong>
+							</li>
+						</ul>
+						<ul>
+							<h3><img src="../images/images/img/d11.gif"/>火地岛经典赤霞干红葡萄酒</h3>
+							<li>
+								<img src="../images/images/img/d11.gif" />
+								<p>火地岛经典赤霞干红葡萄酒</p>
+								<b><img src="../images/images/g9.jpg"/></b>
+								<strong>￥89.0</strong>
+							</li>
+						</ul>
+						<ul>
+							<h3><img src="../images/images/img/d12.gif"/>贝尔莱典藏干红葡萄酒</h3>
+							<li>
+								<img src="../images/images/img/d12.gif" />
+								<p>贝尔莱典藏干红葡萄酒</p>
+								<b><img src="../images/images/g5.jpg"/></b>
+								<strong>￥105.0</strong>
+							</li>
+						</ul>
+
+					</div>
+
+					<div class="con_lbtm">
+						<!--左下-->
+						<h2>为你推荐</h2>
+						<ul>
+							<img src="../images/images/g17.jpg" />
+							<li class="listli">拉菲传奇波尔多干红葡萄酒</li>
+							<li class="listli2">Saint Roch Costieres de Nimes</li>
+							<p>￥79.0</p>
+						</ul>
+						<ul>
+							<img src="../images/images/g2.jpg" />
+							<li class="listli">拉菲传奇波尔多干红葡萄酒</li>
+							<li class="listli2">Saint Roch Costieres de Nimes</li>
+							<p>￥79.0</p>
+						</ul>
+						<ul>
+							<img src="../images/images/g3.jpg" />
+							<li class="listli">拉菲传奇波尔多干红葡萄酒</li>
+							<li class="listli2">Saint Roch Costieres de Nimes</li>
+							<p>￥79.0</p>
+						</ul>
+						<ul>
+							<img src="../images/images/g4.jpg" />
+							<li class="listli">拉菲传奇波尔多干红葡萄酒</li>
+							<li class="listli2">Saint Roch Costieres de Nimes</li>
+							<p>￥79.0</p>
+						</ul>
+						<ul>
+							<img src="../images/images/g5.jpg" />
+							<li class="listli">拉菲传奇波尔多干红葡萄酒</li>
+							<li class="listli2">Saint Roch Costieres de Nimes</li>
+							<p>￥79.0</p>
+						</ul>
+						<ul>
+							<img src="../images/images/g6.jpg" />
+							<li class="listli">拉菲传奇波尔多干红葡萄酒</li>
+							<li class="listli2">Saint Roch Costieres de Nimes</li>
+							<p>￥79.0</p>
+						</ul>
+						<ul>
+							<img src="../images/images/g7.jpg" />
+							<li class="listli">拉菲传奇波尔多干红葡萄酒</li>
+							<li class="listli2">Saint Roch Costieres de Nimes</li>
+							<p>￥79.0</p>
+						</ul>
+						<ul>
+							<img src="../images/images/g8.jpg" />
+							<li class="listli">拉菲传奇波尔多干红葡萄酒</li>
+							<li class="listli2">Saint Roch Costieres de Nimes</li>
+							<p>￥79.0</p>
+						</ul>
+
+					</div>
+
+				</div>
+
+				<div class="content_right">
+					<!--内容右边ajax请求数据-->
+
+					<ul class="con_search">
+						<!--顶部的搜索结果-->
+						相关搜索：
+						<a href="#">45度</a>|
+						<a href="#">西凤酒 45度</a>|
+						<a href="#">牛经典 45度</a>|
+						<a href="#">45度六和液</a>|
+						<a href="#">45度茅台</a>|
+						<a href="#">45度古今原浆</a>
+						<li>共1924件商品</li>
+					</ul>
+
+					<div class="con_rtop1">
+						<!--右上-->
+						<ul class="rtoplist1">
+							<li>
+								<a href="#">品牌：</a>
+								<a href="#">凯富</a>
+							</li>
+							<li>
+								<a href="#">产地：</a>
+								<a href="#">法国</a>
+								<a href="#">德国</a>
+								<a href="#">美国</a>
+								<a href="#">西班牙</a>
+								<a href="#">智利</a>
+								<a href="#">阿根廷</a>
+								<a href="#">其他</a>
+							</li>
+							<li>
+								<a href="#">品种：</a>
+								<a href="#">赤霞珠</a>
+								<a href="#">赤霞珠</a>
+								<a href="#">雷司令</a>
+								<a href="#">美乐</a>
+								<a href="#">霞多丽</a>
+								<a href="#">席来子</a>
+								<a href="#">品丽珠</a>
+								<a href="#">长相思</a>
+							</li>
+							<li class="no_btm">
+								<a href="#">价格：</a>
+								<a href="#">1-49元</a>
+								<a href="#">50-99元</a>
+								<a href="#">100-149元</a>
+								<a href="#">150-199元</a>
+								<a href="#">200-299元</a>
+								<a href="#">300-799元</a>
+								<a href="#">800-999元</a>
+								<a href="#">1000元以上</a>
+								<a href="#">其他</a>
+							</li>
+						</ul>
+
+					</div>
+
+					<div class="con_rtop2">
+						<!--右中-->
+						<p class="redbg">默认</p>
+						<p>销售</p>
+						<p>价格</p>
+						<p>评论数</p>
+						<p>上架时间</p>
+						<ul>
+							<li><input type="checkbox" /> 也买酒</li>
+							<li><input type="checkbox" />也买商城</li>
+							<li>
+								<select>
+									<option>广州</option>
+									<option>上海</option>
+									<option>南京</option>
+									<option>厦门</option>
+									<option>苏州</option>
+								</select>
+							</li>
+							<li><span> 1/67</span></li>
+							<li><img src="../images/images/img/d15.gif" /></li>
+							<li><img src="../images/images/img/d16.gif" /></li>
+						</ul>
+					</div>
+
+					<!--右下ajax请求-->
+					<div class="con_ajaxrequset">
+						<ul class="ajaxlist">
+							<!--	<li class = "ajaxli">
+								<a href="#"><img class="Img" src="images/g4.jpg" /></a>
+								<h4 class="title">五粮液 天贝春红钻 组合瓶...</h4>
+								<p class="place">上海放心酒业</p>
+								<p class="price">￥789.0</p>									
+								<div class = "div"><p class="ratepercent">100</p>好评</div>
+								<div class = "div"><p class="soldnum">0</p>评论</div>
+								<div class="no_nobian"><p class="commentCount">0</p>售出</div>								
+							</li>	-->
+						</ul>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="foot">
+				<!--底部-->
+				<div class="foot_top">
+					<!--上-->
+					<ul class="top_list1">
+						<!--列表1-->
+						<h3>也买酒承诺</h3>
+						<li>
+							<span><a href="#"><img src="../images/images/img/f1.gif"/></a></span>
+							<dl>
+								<dt><a href="#">正品保障</a></dt>
+							</dl>
+						</li>
+						<li>
+							<span><a href="#"><img src="../images/images/img/f2.gif"/></a></span>
+							<dl>
+								<dt><a href="#">30天退货</a></dt>
+								<dt>30天无理由退换货</dt>
+							</dl>
+						</li>
+						<li>
+							<span><a href="#"><img src="../images/images/img/f3.gif"/></a></span>
+							<dl>
+								<dt><a href="#">恒温恒湿</a></dt>
+								<dt>6天会恒温恒湿</dt>
+							</dl>
+						</li>
+						<li>
+							<span><a href="#"><img src="../images/images/img/f4.gif"/></a></span>
+							<dl>
+								<dt><a href="#">免运费</a></dt>
+								<dt>满150元包邮</dt>
+							</dl>
+						</li>
+						<li>
+							<span><a href="#"><img src="../images/images/img/f5.gif"/></a></span>
+							<dl>
+								<dt><a href="#">慢就返</a></dt>
+								<dt>3大城市没有按时送达，也买酒就返</dt>
+							</dl>
+						</li>
+
+					</ul>
+
+					<ul class="top_list2">
+						<!--列表2-->
+						<h3>也买酒承诺</h3>
+						<li>
+							<h4>购物指南</h4>
+							<a href="#">帐户注册</a>
+							<a href="#">购物流程</a>
+							<a href="#">积分制度</a>
+							<a href="#">礼品卡</a>
+							<a href="#">会员权益</a>
+							<a href="#">会员权益</a>
+						</li>
+						<li>
+							<h4>支付帮助</h4>
+							<a href="#">货到付款</a>
+							<a href="#">在线支付</a>
+							<a href="#">银行转帐</a>
+							<a href="#">发票制度</a>
+						</li>
+						<li>
+							<h4>专业特色</h4>
+							<a href="#">存酒库</a>
+							<a href="#">酒类交易中心</a>
+							<a href="#">全国门店分布</a>
+							<a href="#">香港免税</a>
+							<a href="#">期酒交易</a>
+							<a href="#">酒窖</a>
+						</li>
+						<li>
+							<h4>物流配送</h4>
+							<a href="#">150元免运费</a>
+							<a href="#">配送范围</a>
+							<a href="#">慢就返</a>
+						</li>
+						<li>
+							<h4>关于我们</h4>
+							<a href="#">关于也买酒</a>
+							<a href="#">联系我们</a>
+							<a href="#">媒体聚焦</a>
+							<a href="#">隐私声明</a>
+							<a href="#">诚招英才</a>
+							<a href="#">4008208060</a>
+						</li>
+						<li>
+							<h4>招商合作</h4>
+							<a href="#">经销商招募</a>
+							<a href="#">连锁店招募</a>
+							<a href="#">也买联盟</a>
+						</li>
+
+					</ul>
+
+					<ul class="top_list3">
+						<!--列表3-->
+						<h3>关注也买酒</h3>
+						<li>
+							<h4>也买酒APP</h4>
+							<a href="#"><img src="../images/images/img/f8.gif" /></a>
+							<a href="#"><img src="../images/images/img/f9.gif" /></a>
+						</li>
+						<li id="dl">
+							<a href="#"><img src="../images/images/img/f7.gif" /></a>
+							<dl>
+								<dt class="dt">也买酒官方微信</dt>
+								<dt>微信扫描二维码，随时随地与小也亲密接触，精彩活动，劲爆优惠触手可得！</dt>
+							</dl>
+						</li>
+						<li id="sina">
+							<a href="#"><img src="../images/images/img/f6.gif" /></a>
+							<a href="#" id="inlne">新浪微博</a><br />
+							<a href="#" id="tips"><img src="../images/images/img/f10.gif" /></a>
+						</li>
+
+					</ul>
+				</div>
+
+				<div class="foot_mid">
+					<!--中 -->
+					<ul id="midlist">
+						<li>
+							<a href="#">关于也买酒</a>
+						</li>
+						<li>
+							<a href="#">联系我们</a>
+						</li>
+						<li>
+							<a href="#">媒体聚焦</a>
+						</li>
+						<li>
+							<a href="#">诚招英才</a>
+						</li>
+						<li class="borderno">
+							<a href="#">隐私声明</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="registBtm">
+					<!--下-->
+					<ul class="glist1">
+						<!--上1-->
+						<li>
+							<a href="#"><img src="../images/images/img/re1.jpg" alt="" /></a>仅限18周岁以上人士购买&ensp;&ensp;|</li>
+						<li><img src="../images/images/img/g2.gif" alt="" />
+							<a href="#"> 网络社会征信网</a>&ensp;&ensp;|</li>
+						<li><img src="../images/images/img/g3.gif" alt="" />上海工商&ensp;&ensp;|</li>|
+						<li>京公网安备11010502013828</li>
+					</ul>
+
+					<ul class="glist2">
+						<!--中2-->
+						<li>Copyright 2006-2014 也买酒 yesmywine.com 版权所有 &ensp;&ensp;|</li>
+						<li>
+							<a href="#">沪ICP备09093441号</a>
+						</li>
+					</ul>
+
+					<ul class="glist3">
+						<!--下3-->
+						<li>
+							<a href="#"><img src="../images/images/img/chengxin.png" alt="" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="../images/images/img/globle.jpg" /></a>
+						</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</body>
+
+</html>

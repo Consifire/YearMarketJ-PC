@@ -1,0 +1,213 @@
+/***************************登录页面样式****************************/
+
+
+/**************1..大框架*******************/
+
+.login {
+	margin: 0 auto;
+	padding: 0px;
+	width: 1280px;
+	height: 746px;
+	background: url(img/denglu.jpg) no-repeat 220px 133px;
+	/*设置背景,设定位置*/
+}
+
+
+/*******2..页面头部(logo + 右边部分)*******/
+
+.login .loginTop {
+	width: 1280px;
+	height: 97px;
+	border-bottom: 2px solid rgb(187, 14, 48);
+	position: relative;
+}
+
+.login .loginTop #loginlogo {
+	/*左边logo*/
+	position: absolute;
+	left: 3.125%;
+	/*40px*/
+	top: 20px;
+}
+
+.login .loginTop #login_right {
+	/*头部右边*/
+	position: absolute;
+	top: 28px;
+	right: 3.9%;
+	/*50px;*/
+}
+
+
+/****************3..注册内容*************/
+
+
+/*****失去焦点改变控件的样式*****/
+
+.focus {
+	border: 1px solid #f00;
+	background: #fdc8c8;
+}
+
+.login .loginMid {
+	width: 1280px;
+	height: 486px;
+	border-bottom: 1px solid rgb(210, 210, 206);
+	position: relative;
+}
+
+.loginMid div.form {
+	/*一个盒子*/
+	width: 402px;
+	height: 297px;
+	border: 1px solid rgb(210, 210, 206);
+	border-bottom: none;
+	position: absolute;
+	right: 44px;
+	top: 34px;
+}
+
+.login .loginMid div.div {
+	/*表单*/
+	padding: 25px 50px 15px 30px;
+	border-bottom: 1px dotted rgb(210, 210, 206);
+}
+
+.login .loginMid fieldset {
+	/*框*/
+	border: none;
+	border-top: dashed 1px #b6b6af;
+}
+
+.login .loginMid fieldset legend {
+	/*表单标题*/
+	font-size: 20px;
+	color: #4d3d35;
+	font-weight: bolder;
+}
+
+.login .loginMid fieldset input#tel {
+	margin-top: 20px;
+}
+
+.login .loginMid fieldset input#tel,
+input#pwd {
+	/*设置手机和密码输入框的大小样式*/
+	height: 30px;
+	width: 298px;
+	border-left: 2px solid #9a9a9a;
+	border-top: 2px solid #9a9a9a;
+	border-right: 2px solid #e5e4e4;
+	border-bottom: 2px solid #e5e4e4;
+	margin-bottom: 16px;
+}
+
+.login .loginMid fieldset input#btn {
+	/*登陆按钮*/
+	height: 40px;
+	width: 298px;
+	background: rgb(217, 0, 0);
+	font-size: 22px;
+	color: white;
+	margin-top: 15px;
+	margin-bottom: 5px;
+	font-family: "微软雅黑";
+	letter-spacing: 10px;
+}
+
+.login .loginMid div.form a {
+	/*蓝色字体*/
+	color: #3472b2;
+	margin-top: 5px;
+}
+
+
+/*使用合作网站 账号登陆*/
+
+.login .loginMid div.form h4 {
+	height: 12px;
+	line-height: 12px;
+}
+
+.login .loginMid ul.list {
+	/*表单*/
+	width: 320px;
+	height: 90px;
+	padding: 0 50px 0 30px;
+	border-top: none;
+	border: 1px solid rgb(210, 210, 206);
+	position: absolute;
+}
+
+.login .loginMid ul.list li {
+	/*表单*/
+	display: block;
+	float: left;
+	margin-left: 5px;
+}
+
+
+/***************4..页面底部*************/
+
+.login .loginBtm {
+	width: 1280px;
+	height: 165px;
+	position: relative;
+}
+
+.login .loginBtm .glist1 {
+	width: 1280px;
+	height: 55px;
+}
+
+.login .loginBtm ul.glist1 {
+	/***上***/
+	width: 1280px;
+	height: 55px;
+	text-align: center;
+	position: absolute;
+	top: 25px;
+	left: 25%;
+}
+
+.login .loginBtm ul.glist1 li {
+	float: left;
+	line-height: 40px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.login .loginBtm ul.glist1 li img {
+	width: 18px;
+	height: 18px;
+}
+
+.login .loginBtm ul.glist2 {
+	/***中***/
+	width: 1280px;
+	height: 20px;
+	text-align: center;
+	position: absolute;
+	top: 65px;
+	left: 30%;
+}
+
+.login .loginBtm ul.glist2 li {
+	float: left;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.login .loginBtm ul.glist3 {
+	/***下***/
+	width: 1280px;
+	height: auto;
+	position: absolute;
+	bottom: 25px;
+	left: 460px;
+}
+
+.login .loginBtm ul.glist3 li {
+	float: left;
+	margin-right: 10px;
+}

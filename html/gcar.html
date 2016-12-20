@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>也买酒商品购物车</title>
+
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<!--重置样式-->
+		<link rel="stylesheet" type="text/css" href="../css/gcar.css" />
+		<!--购物车样式文件-->
+
+		<script src="../assets/jquery-1.12.0.js" type="text/javascript" charset="utf-8"></script>
+		<!--jq文件-->
+		<script src="../js/cookie01.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/gcar.js"></script>
+		<!--js文件-->
+		<script type="text/javascript">
+			//cookie购物车取数据
+			onload = function() {
+
+					var ogoodslist = document.getElementById("goodslist");
+					var oaddall = document.getElementById("addall");
+					var oul = oaddall.getElementsByTagName("ul")[0];
+					var oli = oul.getElementsByTagName("li")[0];
+					var ob = oli.getElementsByTagName("b")[0];
+
+					//alert(getCookie('goodsname'));
+					//alert(getCookie('goodsnum'));
+					//alert(getCookie('goodsprice'));
+
+					var name = "黄尾袋鼠拉红葡萄酒";
+					//var price = "59.0";
+					//var num = "1";				
+					var name = getCookie("goodsname");
+					var num = getCookie("goodsnum");
+					var price = getCookie("goodsprice");
+
+					if(name) {
+
+						var oli3 = document.createElement("li");
+						var oimg = document.createElement("img"); //创建一个图片					
+						oimg.src = "../images/images/ga1.jpg";
+						oli3.className = "gimg";
+						oli3.appendChild(oimg); //图片加到li里面
+						//ogoodslist.appendChild(oli3);  //li2加到div里面
+
+						var oli1 = document.createElement("li"); //创建li
+						oli1.innerHTML = name;
+						oli1.className = "glistname";
+						//ogoodslist.appendChild(oli1);   //li1加到div里面
+
+						var oli2 = document.createElement("li");
+						oli2.innerHTML = "￥" + price; //价格
+						oli2.className = "price1";
+
+						var oli5 = document.createElement("li");
+						oli5.innerHTML = "￥" + (price * num).toFixed(1);
+						oli5.className = "allnum"; //合计
+
+						var oli4 = document.createElement("li");
+						oli4.innerHTML = num;
+						oli4.className = "num1"; //数量
+
+						var obtn1 = document.createElement("li");
+						obtn1.innerHTML = "-";
+						obtn1.className = "button1"; //减的按钮
+
+						var obtn2 = document.createElement("li");
+						obtn2.innerHTML = "+";
+						obtn2.className = "button2"; //加的按钮
+
+						var oa = document.createElement("a"); //删除按钮
+						oa.innerHTML = "删除";
+						oa.className = "del";
+
+						oa.onclick = function() {
+							if(confirm("确定删除吗？")) { //确认删除信息
+								this.parentNode.parentNode.remove();
+								removeCookie('goodsname', "goodsprice", "goodsnum"); //如果是就删除cookie
+							} else {
+								""; //如果否就不操作
+							}
+
+						}
+
+						//点击减按钮
+						var data = num;
+						obtn1.onclick = function() {
+
+							if(data <= 1) {
+								data = 1;
+							}
+							if(data > 1) {
+								data--;
+							}
+
+							oli4.innerHTML = data;
+							oli5.innerHTML = "￥" + (data * 59).toFixed(1);
+						}
+						obtn2.onclick = function() {
+
+							data++;
+							oli4.innerHTML = data;
+							oli5.innerHTML = (data * 59).toFixed(1);
+
+						}
+
+						var list = document.createElement("div"); //建立一个div存放商品,添加到页面中
+						list.className = "list";
+
+						list.appendChild(oli3);
+						list.appendChild(oli1);
+						list.appendChild(oli2); //价格				
+						list.appendChild(obtn1); //减
+						list.appendChild(oli4); //数量	
+						list.appendChild(obtn2); //加
+						list.appendChild(oli5); //合计
+						list.appendChild(oa); // 删除
+
+						ogoodslist.appendChild(list);
+
+					}
+
+					//2.购买换购换购
+					//点击加入购物车
+					var oexchange = document.getElementById("exchange");
+					var oul = oexchange.getElementsByTagName("ul"); //length = 5
+
+					var arr = []; // 1.创建一个空数组,存放对象
+
+					for(var i = 0; i < oul.length; i++) {
+						var op = oul[i].getElementsByTagName("p")[2]; //取到加入购物车的节点
+
+						op.onclick = function() { //点击加入购物车按钮
+							var ospan = this.parentNode.getElementsByTagName("span")[1]; //span[1]价格，
+							var oinput = this.parentNode.getElementsByTagName("input")[0]; //input[0]数量
+							var oh4 = this.parentNode.getElementsByTagName("h4")[0]; //名称
+							var opic = this.parentNode.parentNode.getElementsByTagName("img")[0]; //图片
+
+							//console.log(opic);
+							//console.log(ospan);
+							//console.log(oinput);
+							//console.log(opic.src);
+
+							var obj = {}; //2. 建立一个空对象，存放商品
+
+							var osrc = opic.src;
+							var oname = oh4.innerText; //名称
+							var onum = oinput.value; //数量
+							var oprice = ospan.innerHTML; //价格
+
+							//对象的属性，定义赋值
+							obj.src = osrc;
+							obj.name = oname;
+							obj.price = oprice;
+							obj.num = onum;
+							arr.push(obj); //把对象放到数组里面
+							var data = JSON.stringify(arr); //把对象转成字符串
+
+							// 3.设置cookie
+							var d = new Date;
+							d.setDate(d.getDate() + 10); //有效期7天				
+							var cookieText = setCookie("goods", data, d); //键值"goods"是name名 ，data是值（一个字符串数组）
+							//console.log(getCookie('goods'));
+							//存进字符串
+
+							//4. 取出cookie
+							var ogoodslist = document.getElementById("goodslist");
+							ogoodslist.className = "goodslist";
+							var price = getCookie("goods"); //取出数组
+							console.log(getCookie("goods"));
+							//得到字符串
+
+							if(price) { //如果存在
+								var data = JSON.parse(price); //把字符串转成对象
+
+								for(var i = 0; i < data.length; i++) { //遍历数组里面的对象
+
+									var _li0 = document.createElement("li");
+									var _img = document.createElement("img"); //图片
+									_img.src = data[i].src;
+									_li0.appendChild(_img);
+
+									var _li1 = document.createElement("li"); //名称
+									_li1.innerHTML = data[i].name;
+									_li1.className = "glistname";
+
+									var _li2 = document.createElement("li"); //价格
+									_li2.innerHTML = data[i].price;
+									_li2.className = "price1";
+
+									var _li3 = document.createElement("li"); //数量
+									_li3.innerHTML = data[i].num;
+									_li3.className = "num1";
+
+									var obtn1 = document.createElement("li");
+									obtn1.innerHTML = "-";
+									obtn1.className = "button1"; //减的按钮
+
+									var obtn2 = document.createElement("li");
+									obtn2.innerHTML = "+";
+									obtn2.className = "button2"; //加的按钮								
+
+									var _li4 = document.createElement("li"); //合计
+									_li4.innerHTML = "￥" + ((_li2.innerHTML) * (_li3.innerHTML)).toFixed(1);
+									_li4.className = "allnum";
+
+									var _delete = document.createElement("a"); //删除
+									_delete.innerHTML = "删除";
+									_delete.className = "del";
+
+									var _list = document.createElement("div");
+									_list.className = "list";
+
+									console.log(_list);
+
+									_list.appendChild(_li0); //图片
+									_list.appendChild(_li1); //名称
+									_list.appendChild(_li2); //价格
+									_list.appendChild(_li3); //数量
+									_list.appendChild(obtn1); //减
+									_list.appendChild(obtn2); //加
+									_list.appendChild(_li4); //合计
+									_list.appendChild(_delete); //删除
+
+									ogoodslist.appendChild(_list);
+
+									//点击按钮加减
+									var _jian = document.getElementsByClassName("button1")[0]; //加
+									var _jia = document.getElementsByClassName("button2")[0]; //减
+									var _value = _li3.innerHTML; //里面的值
+									//console.log(_jia);
+									//console.log(_jian);
+									//console.log(_value);
+
+									var data = 1;
+									_jia.onclick = function() { //1.加									
+										data++;
+										_li3.innerHTML = data; //数量赋值
+										console.log(data);
+										_li4.innerHTML = "￥" + ((_li2.innerHTML) * (_li3.innerHTML)).toFixed(1); //合计
+
+									};
+
+									_jian.onclick = function() { //2.减
+										if(data <= 1) {
+											data = 1;
+										}
+										if(data > 1) {
+											data--;
+										}
+										_li3.innerHTML = data; //数量赋值
+										_li4.innerHTML = "￥" + ((_li2.innerHTML) * (_li3.innerHTML)).toFixed(1); //合计
+									};
+
+									//点击删除按钮
+									_delete.onclick = function() {
+										if(confirm("确定删除吗？")) { //确认删除信息
+											this.parentNode.remove();
+											removeCookie("goods"); //如果是就删除cookie
+										} else {
+											""; //如果否就不操作
+										}
+
+									}
+
+								}
+							}
+						}
+					}
+
+				} //big
+		</script>
+	</head>
+
+	<body>
+
+		<div class="gcarbox">
+
+			<div class="header">
+				<!--头部（最上头+ logo搜索框）-->
+				<div class="header_top">
+					<!--最上头-->
+					<!--<左边>-->
+					<span>
+						<span class="header_span">234567</span>位会员选择
+					<span class="header_denglu"><a href="login.html">登录&ensp;</a>|<a href="regist.html">注册</a></span>
+					</span>
+					<!--<右边>-->
+					<ul class="header_top_right">
+						<li>
+							<a href="#">会员俱乐部</a>
+						</li>
+						<li>
+							<a href="#">签到</a>
+						</li>
+						<li>
+							<a href="#">我的账户<img src="../css/img/sanjiao.jpg" /></a>
+						</li>
+						<li>
+							<a href="#" class="phone"><img src="../css/img/phonelogo.png" />手机版</a>
+						</li>
+						<li>
+							<a href="#">红酒交易中心</a>
+						</li>
+						<li>
+							<a href="#">也买服务</a>
+						</li>
+						<li>
+							<a href="#" class="no_border">设置勿扰</a>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+
+			<!--logo与右边的状态显示-->
+			<div class="glogo">
+				<a href="index.html"><img src="../css/img/glogo.png" /></a>
+				<li class="">
+					<p class="gh"></p>
+					<p class="gfont">购物成功</p>
+					<button class="gbtn2">3</button>
+				</li>
+				<li class="">
+					<p class="gh"></p>
+					<p class="gfont">确认订单信息</p>
+					<button class="gbtn2">2</button>
+				</li>
+				<li class="gheightlight">
+					<p class="gh"></p>
+					<p class="gfont">购物车</p>
+					<button class="gbtn1">1</button>
+				</li>
+			</div>
+
+			<!--1.中间的内容-->
+			<div class="gcontent">
+				<div class="gtip">
+					<!--温馨提示-->
+					<span>温馨提示：</span> 也买商城订单可以合并下单啦！无论你的购物车里有几家也买商家的商品都可以合并成一张订单付款。
+					<b>&times;</b>
+					<!--关闭按钮-->
+				</div>
+
+				<!--购物车显示内容-->
+				<div class="gcarcont">
+					<div class="radio"><input id="check1" checked="checked" type="radio" />由也买酒配送</div>
+					<!--单选-->
+
+					<div class="trTitle">
+						<!--一个表格-->
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<!--tr下面5个td分100%，按比例分配-->
+								<td height="34" width="15%">&ensp;<input type="checkbox" name="checkbox">
+									<label for="checkbox0_t" style="cursor: pointer;">全选</label>
+								</td>
+								<td width="33%">商品名称</td>
+								<td width="13%">单价</td>
+								<td width="13%">数量</td>
+								<td width="13%">小计</td>
+								<td width="13%">&nbsp;</td>
+							</tr>
+						</table>
+					</div>
+
+					<div id="goodslist" class="goodslist">
+						<!--<li class="chenkb"><input type="checkbox"/></li>
+						<li class="gimg"><img src="../images/images/g15.jpg"/></li>
+						<li class="gname">欧娜干红葡萄酒</li>
+						<li class="price1"><big>￥39.0</big></li>
+						<li class="numb">
+							<button class="jian">-</button>
+							<input type="text" value="1" />
+							<button class="jia">+</button>
+						</li>
+						<li class="price2"><b>￥</b><big>39.0</big></li>
+						<li class="lianjie"><a href="#">加入收藏夹<en>&ensp;<a class="del">删除</a></li>-->
+					</div>
+
+				</div>
+
+				<!--合计-->
+				<div class="addall" id="addall">
+					<ul>
+						<li>商品件数：<b>0</b>件</li>
+						<li>商品总价：<b>￥0.0</b></li>
+						<li><span>优惠活动：</span><b>0</b></li>
+						<li><span>优惠券：</span><b>￥0</b></li>
+					</ul>
+				</div>
+
+			</div>
+
+			<!--2.下面的换购活动-->
+			<div class="exchange" id="exchange">
+
+				<h1>
+						本次购买您可享受以下活动
+						<ins>&nbsp;所有0元赠品已自动添加到您的购物车中，您可直接结算</ins>
+					</h1>
+
+				<!--第1件ul商品-->
+				<ul>
+					<h2>订单满1元加 199.0 元换购</h2>
+					<h3><a href="detail.html"><img id="pic1" src="../images/nu1.jpg" width="110" height="180"></a></h3>
+					<dl>
+						<h4><a href="#">薄若莱新酒超值组合</a></h4>
+						<span>换购价：</span><span>199.0</span>元<br />
+						<p>也买价: 606.0元</p>
+						<p>可换购<big>&ensp;1&ensp;</big>瓶</p>
+						<span>数量：</span>
+						<input type="text" id="num3" value="1" maxlength="3" />
+						<p id="btncar1">加入购物车</p>
+					</dl>
+				</ul>
+				<!--第2件ul商品-->
+				<ul>
+					<h2>订单满1元加 39.0 元换购</h2>
+					<h3><a href="detail.html"><img src="../images/nu6.jpg" width="110" height="180"></a></h3>
+					<dl>
+						<h4><a href="#">瓦贝罗干红葡萄酒</a></h4>
+						<span>换购价：</span><span>39.0</span>元<br />
+						<p>也买价： 206.0元</p>
+						<p>可换购<big>&ensp;8&ensp;</big>瓶</p>
+						<span>数量：</span>
+						<input type="text" id="num3" value="1" maxlength="3" />
+						<p id="btncar1">加入购物车</p>
+					</dl>
+				</ul>
+				<!--第3件ul商品-->
+				<ul>
+					<h2>订单满1元加 230.0 元换购</h2>
+					<h3><a href="detail.html"><img src="../images/nu3.jpg" width="110" height="180"></a></h3>
+					<dl>
+						<h4><a href="#">朴奈达酒庄索罗红葡萄酒 </a></h4>
+						<span>换购价：</span><span>230.0</span>元
+						<p>也买价：126.0元</p>
+						<p>可换购<big>&ensp;4&ensp;</big>瓶</p>
+						<span>数量：</span>
+						<input type="text" id="num3" value="1" maxlength="3" />
+						<p id="btncar1">加入购物车</p>
+					</dl>
+				</ul>
+				<!--第4件ul商品-->
+				<ul>
+					<h2>订单满1件加 79.0 元换购</h2>
+					<h3><a href="detail.html"><img src="../images/nu2.png" width="110" height="180"></a></h3>
+					<dl>
+						<h4><a href="#">竖琴醒酒器</a></h4>
+						<span>换购价：</span><span>79.0</span>元
+						<p>也买价：180.0元</p>
+						<p>可换购<big>&ensp;1&ensp;</big>瓶</p>
+						<span>数量：</span>
+						<input type="text" id="num4" value="1" maxlength="3" />
+						<p id="btncar1">加入购物车</p>
+					</dl>
+				</ul>
+				<!--第5件ul商品-->
+				<ul>
+					<h2>订单满1元加 199.0 元换购</h2>
+					<h3><a href="detail.html"><img src="../images/nu5.jpg" width="110" height="180"></a></h3>
+					<dl>
+						<h4><a href="#">薄若莱新酒超值组合</a></h4>
+						<span>换购价：</span><span>199.0</span>元
+						<p>也买价：606.0元</p>
+						<p>可换购<big>&ensp;1&ensp;</big>瓶</p>
+						<span>数量：</span>
+						<input type="text" id="num5" value="1" maxlength="3" />
+						<p id="btncar1">加入购物车</p>
+					</dl>
+				</ul>
+
+			</div>
+
+			<!--底部gcarBtm-->
+			<div class="gcarBtm">
+				<!--下-->
+				<ul class="glist1">
+					<!--上1-->
+					<li>
+						<a href="#"><img src="../css/img/re1.jpg" alt="" /></a>仅限18周岁以上人士购买&ensp;&ensp;|</li>
+					<li><img src="../css/img/g2.gif" alt="" />
+						<a href="#"> 网络社会征信网</a>&ensp;&ensp;|</li>
+					<li><img src="../css/img/g3.gif" alt="" />上海工商&ensp;&ensp;|</li>|
+					<li>京公网安备11010502013828</li>
+				</ul>
+
+				<ul class="glist2">
+					<!--中2-->
+					<li>Copyright 2006-2014 也买酒 yesmywine.com 版权所有 &ensp;&ensp;|</li>
+					<li>
+						<a href="#">沪ICP备09093441号</a>
+					</li>
+				</ul>
+
+				<ul class="glist3">
+					<!--下3-->
+					<li>
+						<a href="#"><img src="../css/img/chengxin.png" alt="" /></a>
+					</li>
+					<li>
+						<a href="#"><img src="../css/img/globle.jpg" /></a>
+					</li>
+				</ul>
+
+			</div>
+
+		</div>
+		<!--大box-->
+
+	</body>
+
+</html>

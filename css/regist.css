@@ -1,0 +1,237 @@
+/******************登录页面login.html*******************/
+
+
+/*********1..外框架*******/
+
+.regist {
+	margin: 0 auto;
+	padding: 0px;
+	width: 1280px;
+	height: 865px;
+	background: url(img/zhucebg.jpg) no-repeat 440px 120px;
+	/*设置背景,设定位置*/
+}
+
+
+/*******2..页面头部(logo + 右边部分)*******/
+
+.regist .registTop {
+	width: 1280px;
+	height: 97px;
+	border-bottom: 2px solid rgb(187, 14, 48);
+	position: relative;
+}
+
+.regist .registTop #registlogo {
+	/*左边logo*/
+	position: absolute;
+	display: block;
+	left: 3.125%;
+	top: 20px;
+}
+
+.regist .registTop #regist_right {
+	/*头部右边*/
+	position: absolute;
+	top: 28px;
+	right: 3.9%;
+}
+
+
+/********3..注册内容********/
+
+
+/*****失去焦点改变控件的样式*****/
+
+.focus {
+	border: 1px solid #f00;
+	background: #fdc8c8;
+}
+
+.regist .registMid {
+	width: 1280px;
+	height: 599px;
+	font-size: 16px;
+	color: black;
+	border-bottom: 1px solid rgb(210, 210, 206);
+	position: relative;
+}
+
+.regist .registMid .registbox {
+	/*注册表单*/
+	width: 358px;
+	height: 537px;
+	padding: 20px 20px 0 20px;
+	border: 1px solid rgb(210, 210, 206);
+	position: absolute;
+	background: rgb(248, 248, 245);
+	left: 40px;
+	top: 20px;
+}
+
+.regist .registMid h2 {
+	/*标题*/
+	color: black;
+}
+
+.regist .registMid p {
+	margin-bottom: 26px;
+}
+
+.regist .registMid .registbox form p#aletInfo {
+	/*提示框*/
+	width: auto;
+	height: 12px;
+	color: red;
+	text-align: center;
+}
+
+.regist .registMid p a {
+	/*标题下面的蓝色字体*/
+	display: block;
+	width: 358px;
+	height: 14px;
+	line-height: 12px;
+	text-align: right;
+	color: rgb(0, 102, 204);
+	border-bottom: 1px solid rgb(210, 210, 206);
+}
+
+.regist .registMid input {
+	/*对所有的input设置大小和边框*/
+	height: 38px;
+	border-left: 2px solid #9a9a9a;
+	border-top: 2px solid #9a9a9a;
+	border-right: 2px solid #e5e4e4;
+	border-bottom: 2px solid #e5e4e4;
+	margin-bottom: 14px;
+	/*下面间隔14px*/
+}
+
+.regist .registMid input#txt1 {
+	/*手机号码*/
+	width: 280px;
+	height: 38px;
+}
+
+.regist .registMid input#txt2 {
+	/*验证码*/
+	width: 180px;
+}
+
+.regist .registMid input#txt3 {
+	/*验证码出现框*/
+	width: 110px;
+	height: 38px;
+	position: absolute;
+	left: 260px;
+	border: none;
+	top: 214px;
+	background: white;
+	font-size: 22px;
+	letter-spacing: 4px;
+	/*字间距*/
+	cursor: pointer;
+}
+
+.regist .registMid input#setnum {
+	/*短信验证码*/
+	width: 158px;
+}
+
+.regist .registMid input#getnum {
+	/* 短信点击按钮*/
+	width: 98px;
+	border: none;
+	color: white;
+	background: rgb(244, 95, 3);
+}
+
+.regist .registMid input#pwd {
+	/*密码框*/
+	width: 310px;
+}
+
+.regist .registMid input#pwd2 {
+	/*确认密码框*/
+	width: 277px;
+}
+
+.regist .registMid input#smt {
+	/*注册按钮*/
+	width: 355px;
+	background: #bb0e30;
+	color: white;
+	font-size: 16px;
+	font-weight: 900;
+}
+
+.regist .registMid a#bule {
+	color: rgb(0, 102, 204);
+}
+
+
+/***********4..底部*******/
+
+.regist .registBtm {
+	width: 1280px;
+	height: 165px;
+	position: relative;
+}
+
+.regist .registBtm .glist1 {
+	width: 1280px;
+	height: 55px;
+}
+
+.regist .registBtm ul.glist1 {
+	/***上***/
+	width: 1280px;
+	height: 55px;
+	text-align: center;
+	position: absolute;
+	top: 25px;
+	left: 25%;
+}
+
+.regist .registBtm ul.glist1 li {
+	float: left;
+	line-height: 40px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.regist .registBtm ul.glist1 li img {
+	width: 18px;
+	height: 18px;
+}
+
+.regist .registBtm ul.glist2 {
+	/***中***/
+	width: 1280px;
+	height: 20px;
+	text-align: center;
+	position: absolute;
+	top: 65px;
+	left: 30%;
+}
+
+.regist .registBtm ul.glist2 li {
+	float: left;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.regist .registBtm ul.glist3 {
+	/***下***/
+	width: 1280px;
+	height: auto;
+	position: absolute;
+	bottom: 25px;
+	left: 460px;
+}
+
+.regist .registBtm ul.glist3 li {
+	float: left;
+	margin-right: 10px;
+}

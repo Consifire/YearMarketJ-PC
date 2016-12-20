@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>导航</title>
+		<!--页面导航条及子菜单-->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<!--重置样式-->
+		<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+		<!--导航样式表-->
+		<link rel="stylesheet" type="text/css" href="../css/banner.css" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+
+		<script src="../assets/jquery-1.12.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/nav.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/jquery.carousel.js" type="text/javascript" charset="utf-8"></script>
+		<!--轮播图-->
+
+		<script type="text/javascript">
+			jQuery(function($) {
+				$(".lbt").lcarousel({ //轮播图
+					type: "fade"
+				});
+			});
+		</script>
+
+	</head>
+
+	<body>
+
+		<!--导航和主页大轮播-->
+
+		<div class="nav">
+			<ul class="nav_ul">
+				<!--导航条-->
+				<li class="leftli li1">
+					<a href="index.html">首页</a>
+				</li>
+				<li class="li1">
+					<a href="list.html">超值抢购</a>
+				</li>
+				<li class="li1">
+					<a href="list.html">精品奖购</a>
+				</li>
+				<li class="li1">
+					<a href="list.html">名庄特卖</a>
+				</li>
+				<li class="li1">
+					<a href="list.html">香港免税</a>
+				</li>
+				<li class="li1">
+					<a href="list.html">国酒馆</a>
+				</li>
+
+				<!--主页轮播图-->
+				<div class="lbt">
+					<ul id="list">
+						<li><img src="../images/lb1.jpg" /></li>
+						<li><img src="../images/lb2.jpg" /></li>
+						<li><img src="../images/lb3.jpg" /></li>
+						<li><img src="../images/lb4.jpg" /></li>
+						<li><img src="../images/lb5.jpg" /></li>
+						<li><img src="../images/lb6.jpg" /></li>
+						<li><img src="../images/lb7.jpg" /></li>
+						<li><img src="../images/lb8.jpg" /></li>
+						<li><img src="../images/lb9.jpg" /></li>
+					</ul>
+				</div>
+
+				<!--选酒中心，有下拉框-->
+				<div id="choosemid">
+					<ins><img src="../css/img/listlogo.jpg"/> &ensp;选酒中心</ins>
+					<div class="nav_list">
+						<ul class="nav_list_ul">
+							<li>
+								<!--第1个li-->
+								<dl class="dl_1">葡萄酒</dl>
+								<dt class="dt_1">
+										<a href="#">法国</a>
+										<a href="#">西班牙</a>
+										<a href="#">意大利</a>
+										<a href="#">干红</a>
+										<a href="#">甜白</a>
+										<a href="#">智利</a>
+										<a href="#">香槟</a>
+										<a href="#">加强葡萄酒</a>
+										<a href="#">列级名庄</a>					
+									</dt>
+							</li>
+
+							<li>
+								<!--第2个li-->
+								<dl class="dl_1">一键选酒</dl>
+								<dt class="dt_1">
+										<a href="#">餐酒精选</a>
+										<a href="#" class="bg_red">礼盒</a>
+										<a href="#">实惠套装</a>
+										<a href="#">权威高分酒</a>
+										<a href="#">聚会婚庆整箱</a>
+										<a href="#">精品闪购</a>
+										<a href="#" class="bg_red">团购</a>
+										<a href="#" class="bg_red">陈酿老酒</a>				
+									</dt>
+							</li>
+
+							<li>
+								<!--第3个li-->
+								<dl class="dl_1">洋酒烈酒</dl>
+								<dt class="dt_1">
+										<a href="#">轩尼诗</a>
+										<a href="#">威士忌</a>
+										<a href="#">鸡尾酒</a>
+										<a href="#">百利甜</a>
+										<a href="#">干邑</a>
+										<a href="#">白兰地</a>
+										<a href="#">朗姆酒</a>
+										<a href="#">伏加特</a>				
+									</dt>
+							</li>
+
+							<li>
+								<!--第4个li-->
+								<dl class="dl_1">中国白酒</dl>
+								<dt class="dt_1">
+										<a href="#">茅台</a>
+										<a href="#">五粮液</a>
+										<a href="#">洋河</a>
+										<a href="#">红花郎</a>			
+									</dt>
+							</li>
+
+							<li>
+								<!--第5个li-->
+								<dl class="dl_1">酒具周边</dl>
+								<dt class="dt_1">
+										<a href="#">酒杯</a>
+										<a href="#" class="bg_red">酒柜</a>
+										<a href="#">酒刀</a>
+										<a href="#">醒酒器</a>	
+										<a href="#" class="bg_red">礼盒</a>
+										<a href="#">其他酒具</a>							
+									</dt>
+							</li>
+						</ul>
+					</div>
+
+					<!--下拉框的二级菜单	-->
+					<div class="nav_list_2">
+						<ul class="nav_list_list11">
+							<li>
+								<!--第1个分类li-->
+								<p>
+									<a href="#">红葡萄酒</a>
+								</p>
+								<b><a href="#">干红</a>
+									    <a href="#">半干红</a>
+									    <a href="#">半甜红</a>
+									    <a href="#">甜红</a>
+									</b>
+							</li>
+
+							<li>
+								<!--第2个分类li-->
+								<p>
+									<a href="#">白葡萄酒</a>
+								</p>
+								<b><a href="#">半干白</a>
+									    <a href="#">半甜白</a>
+									    <a href="#">贵腐酒</a>
+									    <a href="#">甜白</a>
+									    <a href="#">干白</a>
+									</b>
+							</li>
+							<li>
+								<!--第3个分类li-->
+								<p>
+									<a href="#">白葡萄酒</a>
+								</p>
+								<b><a href="#">半干白</a>
+									    <a href="#" class="bg_grey">半甜白</a>
+									    <a href="#">贵腐酒</a>
+									    <a href="#">甜白</a>
+									    <a href="#">干白</a>
+									</b>
+							</li>
+							<li>
+								<!--第4个分类li-->
+								<p>
+									<a href="#">桃红葡萄酒</a>
+								</p>
+								<b><a href="#">半干型桃红</a>
+									    <a href="#">干型桃红</a>
+									    <a href="#">半甜桃红</a>
+									    <a href="#">甜型桃红</a>
+									</b>
+							</li>
+						</ul>
+					</div>
+					<div class="nav_list_22">
+						<ul class="nav_list_list22">
+							<li>
+								<!--第1个分类li-->
+								<p>
+									<a href="#">红葡萄酒</a>
+								</p>
+								<b><a href="#">干红</a>
+									    <a href="#" class="bg_grey">半干红</a>
+									    <a href="#">半甜红</a>
+									    <a href="#">甜红</a>
+									</b>
+							</li>
+							<li>
+								<!--第2个分类li-->
+								<p>
+									<a href="#">桃红葡萄酒</a>
+								</p>
+								<b><a href="#">半干型桃红</a>
+									    <a href="#">干型桃红</a>
+									    <a href="#">半甜桃红</a>
+									    <a href="#">甜型桃红</a>
+									</b>
+							</li>
+							<li>
+								<!--第3个分类li-->
+								<p>
+									<a href="#">白葡萄酒</a>
+								</p>
+								<b><a href="#">半干白</a>
+									    <a href="#">半甜白</a>
+									    <a href="#">贵腐酒</a>
+									    <a href="#" class="bg_grey">甜白</a>
+									    <a href="#" class="bg_grey">干白</a>
+									</b>
+							</li>
+
+							<li>
+								<!--第4个分类li-->
+								<p>
+									<a href="#">桃红葡萄酒</a>
+								</p>
+								<b><a href="#">半干型桃红</a>
+									    <a href="#">干型桃红</a>
+									    <a href="#">半甜桃红</a>
+									    <a href="#">甜型桃红</a>
+									</b>
+							</li>
+						</ul>
+					</div>
+					<div class="nav_list_222">
+						<ul class="nav_list_list33">
+							<li>
+								<!--第1个分类li-->
+								<p>
+									<a href="#">红葡萄酒</a>
+								</p>
+								<b><a href="#">干红</a>
+									    <a href="#">半干红</a>
+									    <a href="#">半甜红</a>
+									    <a href="#">甜红</a>
+									</b>
+							</li>
+
+							<li>
+								<!--第2个分类li-->
+								<p>
+									<a href="#">白葡萄酒</a>
+								</p>
+								<b><a href="#">半干白</a>
+									    <a href="#">半甜白</a>
+									    <a href="#">贵腐酒</a>
+									    <a href="#">甜白</a>
+									    <a href="#">干白</a>
+									</b>
+							</li>
+
+							<li>
+								<!--第3个分类li-->
+								<p>
+									<a href="#">桃红葡萄酒</a>
+								</p>
+								<b><a href="#">半干型桃红</a>
+									    <a href="#">干型桃红</a>
+									    <a href="#">半甜桃红</a>
+									    <a href="#">甜型桃红</a>
+									</b>
+							</li>
+							<li>
+								<!--第3个分类li-->
+								<p>
+									<a href="#">桃红葡萄酒</a>
+								</p>
+								<b><a href="#">半干型桃红</a>
+									   <a href="#">甜型桃红</a>
+									</b>
+							</li>
+						</ul>
+					</div>
+					<div class="nav_list_2222">
+						<ul class="nav_list_list44">
+							<li>
+								<!--第1个分类li-->
+								<p>
+									<a href="#">红葡萄酒</a>
+								</p>
+								<b><a href="#">干红</a>
+									    <a href="#">半干红</a>
+									    <a href="#">贵腐酒</a>
+									    <a href="#" class="bg_grey">甜白</a>
+									    <a href="#">贵腐酒</a>
+									    <a href="#">甜白</a>								    
+									    <a href="#">半甜红</a>
+									    <a href="#">甜红</a>
+									</b>
+							</li>
+
+							<li>
+								<!--第2个分类li-->
+								<p>
+									<a href="#">白葡萄酒</a>
+								</p>
+								<b><a href="#">半干白</a>
+									    <a href="#">半甜白</a>
+									    <a href="#">贵腐酒</a>
+									    <a href="#">甜白</a>
+									    <a href="#">干白</a>
+									</b>
+							</li>
+
+							<li>
+								<!--第3个分类li-->
+								<p>
+									<a href="#">桃红葡萄酒</a>
+								</p>
+								<b><a href="#">半干型桃红</a>
+									    <a href="#" class="bg_grey">干型桃红</a>
+									    <a href="#">半甜桃红</a>
+									    <a href="#">甜型桃红</a>
+									</b>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</ul>
+
+		</div>
+
+	</body>
+
+</html>

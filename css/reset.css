@@ -1,0 +1,67 @@
+/********1.  重置样式文件********/
+
+body,
+html,
+ul,
+li,
+a,
+img,
+em,
+strong,
+p,
+div,
+form,
+ol,
+span,
+i,
+button,
+dl,
+dt,
+b,
+ins {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+input {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background: #FFF;
+	font-size: 12px;
+	color: rgb(156, 140, 134);
+	/*页面字体的颜色*/
+	font: 12px/1.6em Helvetica, Arial, sans-serif;
+	/*字体大小和字体样式*/
+}
+
+a {
+	text-decoration: none;
+	/*a标签不显示样式*/
+	color: rgb(156, 140, 134);
+}
+
+a:hover {
+	cursor: pointer;
+	/*手势*/
+	text-decoration: underline;
+	/* 鼠标滑过下划线*/
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+img {
+	border: none;
+	/*图片误差*/
+}
+
+img:hover {
+	cursor: pointer;
+	/*鼠标滑过图片显示手势*/
+}
